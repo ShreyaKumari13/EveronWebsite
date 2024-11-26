@@ -28,7 +28,7 @@ const OurMission = () => {
                 </p>
                 <p className="w-[511px]  pt-4 text-[24px] font-lato font-[400] text-[#1C1C1C] leading-[28.8px] text-left">
                   To deliver professional, reliable, and personalized consultancy services that
-                  address our clients' unique challenges in property, mortgage, and financial
+                  address our clients&apos; unique challenges in property, mortgage, and financial
                   matters.
                 </p>
               </div>

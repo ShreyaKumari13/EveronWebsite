@@ -95,7 +95,7 @@ const TestimonialSection = () => {
             {/* Testimonial Card */}
             <div className="bg-[#B392550D] p-8 rounded-[30px]">
               <blockquote className="text-[24px] font-lato mb-6 text-[#1C1C1C] leading-[28.8px]">
-                "{testimonials[currentIndex].quote}"
+                &ldquo;{testimonials[currentIndex].quote}&rdquo;
               </blockquote>
               <div className="flex items-center gap-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden">
