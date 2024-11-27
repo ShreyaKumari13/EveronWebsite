@@ -6,7 +6,7 @@ import Header from '@/components/Header'
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[85vh] h-[calc(100vh+96px)]">
+    <section className="relative w-full min-h-[85vh] flex flex-col">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 
@@ -24,7 +24,7 @@ const HeroSection = () => {
       <Header variant="transparent" />
 
       {/* Content Container */}
-      <div className="absolute bottom-0 left-0 z-20 w-full">
+      <div className="relative z-20 w-full mt-auto">
         <div className="container mx-auto">
           {/* Rectangle 1 */}
           <div className="relative">
@@ -82,3 +82,4 @@ const HeroSection = () => {
 }
 
 export default HeroSection
+
