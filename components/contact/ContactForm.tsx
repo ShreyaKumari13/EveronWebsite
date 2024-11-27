@@ -27,7 +27,7 @@ const ContactForm = () => {
             {/* Left Section - Image */}
             <div className="w-full lg:w-1/2 h-full">
               <Image
-                src="/contactimage/image (9).png"
+                src="/contactimage/Contact Us.jpg"
                 alt="Contact Us Building"
                 width={716}
                 height={847}

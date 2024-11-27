@@ -35,7 +35,7 @@ const OurExpertise = () => {
           <div className="relative flex justify-start items-start pt-[20px] pl-[100px] h-full">
             <div className="relative w-[600px] h-[360px]">
               <Image
-                src="/aboutimage/image (7).png"
+                src="/aboutimage/Our Expertise.jpg"
                 alt="Team of experts discussing"
                 fill
                 className="rounded-[30px] object-cover"

@@ -43,12 +43,14 @@ const WelcomeSection = () => {
 
           {/* Right Side - Image */}
           <div className="relative flex justify-center items-end h-full">
-            <div className="relative w-[637px] h-[498px]">
+            <div className="relative w-[637px] h-[498px] overflow-hidden">
               <Image
-                src="/images/image.png"
+                src="/images/Welcome to image.jpg"
                 alt="House"
                 fill
-                className="rounded-tl-[30px] object-cover"
+                className="rounded-[30px] object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={100}
                 priority
               />
             </div>

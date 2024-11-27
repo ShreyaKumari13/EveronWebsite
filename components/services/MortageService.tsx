@@ -34,7 +34,7 @@ const MortageService = () => {
           <div className="relative flex justify-start items-start pt-[80px] pl-[100px] h-full">
             <div className="relative w-[600px] h-[360px]">
               <Image
-                src="/serviceimage/image (10).png"
+                src="/serviceimage/Mortgage.jpg"
                 alt="Mortgage Services"
                 fill
                 className="rounded-[30px] object-cover"

@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
     quote: "Thank you, Team, for exceeding our expectations. You sold our investment properties effectively, achieving impressive prices even in a challenging market.",
     author: "Chang Ching",
     authorImage: "/images/Ellipse 5.png",
-    projectImage: "/images/image (4).png",
+    projectImage: "/images/WHAT OUR CLIENT SAY.jpg",
   },
   // Add more testimonials as needed
 ]
@@ -76,7 +76,9 @@ const TestimonialSection = () => {
               src={testimonials[currentIndex].projectImage}
               alt={testimonials[currentIndex].projectName}
               fill
-              className="rounded-tl-[30px] object-cover"
+              className="rounded-[30px] object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={100}
               priority
             />
           </div>
@@ -106,8 +108,10 @@ const TestimonialSection = () => {
                     className="object-cover"
                   />
                 </div>
-                <div className="text-[24px] font-lato font-semibold text-[#1C1C1C] leading-[28.8px]">
-                  {testimonials[currentIndex].author}
+                <div>
+                  <p className="text-[24px] font-lato font-bold text-[#1C1C1C]">
+                    {testimonials[currentIndex].author}
+                  </p>
                 </div>
               </div>
             </div>

@@ -32,7 +32,7 @@ const WhoWeAre = () => {
           <div className="relative flex justify-start items-start pt-[80px] pl-[10px] h-full">
             <div className="relative w-[600px] h-[360px]">
               <Image
-                src="/aboutimage/image (5).png"
+                src="/aboutimage/Who we are.jpg"
                 alt="House"
                 fill
                 className="rounded-[30px] object-cover"
