@@ -1,60 +1,3 @@
-// 'use client'
-
-// import Image from 'next/image'
-// import Header from '../Header'
-
-// export default function AboutHero() {
-//   return (
-//     <section className="relative w-full min-h-[85vh] flex items-center">
-//       {/* Background Image */}
-//       <div className="absolute inset-0">
-//         <Image
-//           src="/aboutimage/Banner.jpg"
-//           alt="Luxury home background"
-//           fill
-//           className="object-cover"
-//           priority
-//         />
-//         {/* Gradient Overlay */}
-//         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
-//       </div>
-
-//       {/* Header */}
-//       <Header variant="transparent" />
-
-//       {/* Hero Content */}
-//       <div className="relative z-10 w-full flex items-center justify-center -mt-12">
-//         <div className="container mx-auto px-4 flex items-center justify-center">
-//           <div className="w-[901px] bg-[#1C1C1C59] rounded-[15px] py-8 px-12 border border-white/20">
-//             <div className="text-white text-center flex flex-col items-center">
-//               <h1 className="text-5xl font-bold mb-4 w-full text-center">
-//                 Find Your Dream Property Here
-//               </h1>
-//               <p className="text-2xl mb-3 max-w-[80%] whitespace-nowrap text-center">
-//                 Property & Mortgage Consultancy in Hong Kong | Everon
-//               </p>
-//               <div className="font-lato text-[24px] leading-[28.8px] mb-6 font-normal text-center w-full">
-//                 <p className="mx-auto max-w-[800px]">Everon Property & Mortgage Consultancy Limited offers tailored</p>
-//                 <p className="mx-auto max-w-[700px]">property, mortgage, and financial services to individuals</p>
-//                 <p className="mx-auto max-w-[600px]">and corporations in Hong Kong.</p>
-//               </div>
-//               <div className="flex items-center justify-center">
-//                 <button className="w-[137px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center">
-//                   <span className="text-[20px] font-lato font-normal text-white">Learn More</span>
-//                 </button>
-//                 <div className="ml-[5px] w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
-//                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-[-55.32deg]">
-//                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#8E8154" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//                   </svg>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
 'use client'
 
 import Image from 'next/image'
@@ -62,7 +5,7 @@ import Header from '../Header'
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center">
+    <section className="relative w-full min-h-[85vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -80,24 +23,24 @@ export default function AboutHero() {
       <Header variant="transparent" />
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full flex items-center justify-center mt-16 md:mt-0">
+      <div className="relative z-10 w-full flex items-center justify-center -mt-12">
         <div className="container mx-auto px-4 flex items-center justify-center">
-          <div className="w-full max-w-4xl bg-[#1C1C1C59] rounded-[15px] py-8 px-4 md:px-12 border border-white/20">
+          <div className="w-[901px] bg-[#1C1C1C59] rounded-[15px] py-8 px-12 border border-white/20">
             <div className="text-white text-center flex flex-col items-center">
-              <h1 className="text-3xl md:text-5xl font-bold mb-4 w-full text-center">
+              <h1 className="text-5xl font-bold mb-4 w-full text-center">
                 Find Your Dream Property Here
               </h1>
-              <p className="text-xl md:text-2xl mb-3 w-full md:max-w-[80%] text-center">
+              <p className="text-2xl mb-3 max-w-[80%] whitespace-nowrap text-center">
                 Property & Mortgage Consultancy in Hong Kong | Everon
               </p>
-              <div className="font-lato text-lg md:text-2xl leading-relaxed mb-6 font-normal text-center w-full">
+              <div className="font-lato text-[24px] leading-[28.8px] mb-6 font-normal text-center w-full">
                 <p className="mx-auto max-w-[800px]">Everon Property & Mortgage Consultancy Limited offers tailored</p>
                 <p className="mx-auto max-w-[700px]">property, mortgage, and financial services to individuals</p>
                 <p className="mx-auto max-w-[600px]">and corporations in Hong Kong.</p>
               </div>
               <div className="flex items-center justify-center">
                 <button className="w-[137px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center">
-                  <span className="text-lg md:text-xl font-lato font-normal text-white">Learn More</span>
+                  <span className="text-[20px] font-lato font-normal text-white">Learn More</span>
                 </button>
                 <div className="ml-[5px] w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-[-55.32deg]">
@@ -112,4 +55,3 @@ export default function AboutHero() {
     </section>
   )
 }
-
