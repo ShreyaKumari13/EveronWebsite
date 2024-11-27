@@ -10,7 +10,7 @@ const OurMission = () => {
           <div className="relative flex justify-start items-start pt-[20px] pl-[100px] h-full">
             <div className="relative w-[600px] h-[360px]">
               <Image
-                src="/aboutimage/Our Mission.jpg"
+                src="/aboutimage/Our mission.jpg"
                 alt="Two people discussing in an office"
                 fill
                 className="rounded-[30px] object-cover"
