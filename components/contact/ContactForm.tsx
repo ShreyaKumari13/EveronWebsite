@@ -39,7 +39,7 @@ const ContactForm = () => {
             {/* Right Section - Contact Form */}
             <div className="w-full lg:w-1/2 flex items-center justify-center h-full">
               <div className="w-full max-w-md">
-                <h1 className="text-[32px] font-lato font-[700] text-[#1C1C1C] leading-[40px] text-center mb-3">Let's Get In Touch.</h1>
+                <h1 className="text-[32px] font-lato font-[700] text-[#1C1C1C] leading-[40px] text-center mb-3">Let&apos;s Get In Touch.</h1>
                 <p className="text-[16px] font-lato text-[#1C1C1C] text-center mb-6">
                   or just reach out manually to <span className="font-semibold">info@everonmortgage.com</span>
                 </p>

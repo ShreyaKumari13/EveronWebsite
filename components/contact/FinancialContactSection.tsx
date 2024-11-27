@@ -2,15 +2,15 @@
 
 const FinancialContactSection = () => {
   return (
-    <section className="w-full bg-gray-50 py-10">
+    <section className="w-full bg-gray-50 pt-10 pb-20">
       <div className="max-w-[1280px] mx-auto px-4">
         {/* Title Section */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 pt-6 pb-12">
           <button className="mb-4 border border-[#1C1C1C] px-6 py-2 rounded-lg text-[#1C1C1C] hover:bg-gray-100 transition-colors font-lato">
             Get in Touch
           </button>
           <h2 className="text-[28px] md:text-[32px] font-bold text-[#1C1C1C] mb-3 font-lato">
-            Let's Work Together to Solve Your Financial Challenges
+            Let&apos;s Work Together to Solve Your Financial Challenges
           </h2>
           <p className="text-[16px] text-gray-600 font-lato">
             or just reach out manually to <span className="font-semibold">info@everonmortgage.com</span>
