@@ -27,17 +27,17 @@ export default function AboutHero() {
         <div className="container mx-auto px-4 flex items-center justify-center">
           <div className="w-[901px] bg-[#1C1C1C59] rounded-[15px] p-12 border border-white/20">
             <div className="text-white text-center flex flex-col items-center">
-              <h1 className="text-5xl font-bold mb-6 w-full">
+              <h1 className="text-5xl font-bold mb-6 w-full text-center">
                 Find Your Dream Property Here
               </h1>
-              <p className="text-2xl mb-4 max-w-[80%] whitespace-nowrap">
+              <p className="text-2xl mb-4 max-w-[80%] whitespace-nowrap text-center">
                 Property & Mortgage Consultancy in Hong Kong | Everon
               </p>
-              <p className="font-lato text-[24px] leading-[28.8px] mb-8 font-normal text-center max-w-[60%]">
-                Everon Property & Mortgage Consultancy Limited offers tailored<br />
-                property, mortgage, and financial services to individuals and<br />
-                corporations in Hong Kong.
-              </p>
+              <div className="font-lato text-[24px] leading-[28.8px] mb-8 font-normal text-center w-full">
+                <p className="mx-auto w-[600px]">Everon Property & Mortgage Consultancy Limited offers tailored</p>
+                <p className="mx-auto w-[500px]">property, mortgage, and financial services to individuals and</p>
+                <p className="mx-auto w-[350px]">corporations in Hong Kong.</p>
+              </div>
               <div className="flex items-center justify-center">
                 <button className="w-[137px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center">
                   <span className="text-[20px] font-lato font-normal text-white">Learn More</span>
