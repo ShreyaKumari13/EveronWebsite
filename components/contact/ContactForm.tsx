@@ -112,7 +112,7 @@ const ContactForm = () => {
                         <input
                           type="tel"
                           id="phone"
-                          placeholder="Enter phone number"
+                          placeholder="Enter your phone number"
                           className="w-full pl-10 pr-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8E8154] focus:border-[#8E8154]"
                         />
                         <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
@@ -129,26 +129,28 @@ const ContactForm = () => {
                     <label htmlFor="message" className="block text-[16px] font-lato text-[#1C1C1C] mb-2">
                       Message:
                     </label>
-                    <textarea
-                      id="message"
-                      placeholder="Enter your main text here"
-                      rows={4}
-                      className="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8E8154] focus:border-[#8E8154] resize-none"
-                    ></textarea>
+                    <div className="relative">
+                      <textarea
+                        id="message"
+                        rows={4}
+                        placeholder="Write your message here..."
+                        className="w-full pl-10 pr-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8E8154] focus:border-[#8E8154]"
+                      ></textarea>
+                      <span className="absolute top-3 left-0 pl-3 flex items-start text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                    </div>
                   </div>
 
                   {/* Submit Button */}
-                  <div className="flex justify-center pt-2">
-                    <button type="submit" className="bg-[#004400] text-white px-6 py-2 text-[16px] font-medium rounded-lg inline-flex items-center space-x-2">
-                      <span>Submit Form</span>
-                      <Image
-                        src="/images/Group 5.png"
-                        alt="Arrow Right"
-                        width={24}
-                        height={24}
-                      />
-                    </button>
-                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-[#004400] text-white py-2.5 rounded-lg hover:bg-[#003300] transition-colors font-lato"
+                  >
+                    Send Message
+                  </button>
                 </form>
               </div>
             </div>

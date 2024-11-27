@@ -37,7 +37,7 @@ const PropertyService = () => {
                   Property Consultancy Services
                 </p>
                 <p className="w-[511px] pt-4 text-[24px] font-lato font-[400] text-[#1C1C1C] leading-[28.8px] text-left">
-                  Whether you're buying, selling, or investing, our experts provide tailored advice to help you make informed decisions. 
+                  Whether you&apos;re buying, selling, or investing, our experts provide tailored advice to help you make informed decisions. 
                   We analyze market trends and craft strategies to maximize your returns while minimizing risks.
                 </p>
               </div>
