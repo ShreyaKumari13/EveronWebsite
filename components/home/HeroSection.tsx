@@ -6,7 +6,7 @@ import Header from '@/components/Header'
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full h-[calc(100vh+96px)]">
+    <section className="relative w-full min-h-[85vh] h-[calc(100vh+96px)]">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 

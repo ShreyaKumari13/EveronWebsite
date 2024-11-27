@@ -13,12 +13,15 @@ const MortageService = () => {
                 <div className="flex items-center">
                   <div className="relative w-[50px] h-[50px] mr-4">
                     <Image
-                      src="/serviceimage/group 163.png"
+                      src="/serviceimage/Group.png"
                       alt="Mortgage Icon"
                       fill
+                      sizes="50px"
+                      priority
                       className="object-contain"
                     />
                   </div>
+                  <h2 className="text-[24px] font-lato font-[700] text-[#1C1C1C]">Our Services</h2>
                 </div>
                 <p className="w-[474px] text-[40px] font-lato font-[700] text-[#1C1C1C] leading-[48px] text-left mt-4">
                   Mortgage Planning
@@ -31,13 +34,14 @@ const MortageService = () => {
           </div>
 
           {/* Right Side - Image */}
-          <div className="relative flex justify-start items-start pt-[80px] pl-[100px] h-full">
+          <div className="relative flex justify-end items-start pt-[20px] pr-[100px] h-full">
             <div className="relative w-[600px] h-[360px]">
               <Image
                 src="/serviceimage/Mortgage.jpg"
-                alt="Mortgage Services"
+                alt="Mortgage Service"
                 fill
                 className="rounded-[30px] object-cover"
+                sizes="(max-width: 768px) 100vw, 600px"
                 priority
               />
             </div>
