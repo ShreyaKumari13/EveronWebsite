@@ -6,14 +6,14 @@ import Header from '@/components/Header'
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-[calc(100vh+96px)]">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 
           src="/images/image_bg.png"
           alt="Luxury home background"
           fill
-          className="object-cover"
+          className="object-cover w-full"
           priority
         />
         {/* Gradient Overlay */}
@@ -23,49 +23,57 @@ const HeroSection = () => {
       {/* Header */}
       <Header variant="transparent" />
 
-      {/* Left Side Details */}
-      <div className="absolute left-0 bottom-0 z-20 pb-20">
-        {/* Rectangle 1 */}
-        <div className="relative ml-24">
-          <div className="w-[470px] h-[83px] bg-white rounded-r-[30px] flex items-center pl-[111px]">
-            <p className="text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-[54px] whitespace-nowrap">
-              Buy Your Next
-            </p>
+      {/* Content Container */}
+      <div className="absolute bottom-0 left-0 z-20 w-full">
+        <div className="container mx-auto">
+          {/* Rectangle 1 */}
+          <div className="relative">
+            <div className="w-screen sm:w-[585px] h-[83px] bg-white rounded-r-[30px] flex items-center">
+              <div className="pl-[100px] ml-auto">
+                <p className="text-3xl sm:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-[54px] whitespace-nowrap pr-[90px]">
+                  Buy Your Next
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Rectangle 2 */}
-        <div className="relative mt-0 ml-24">
-          <div className="w-[296px] h-[83px] bg-white rounded-r-[30px] flex items-center pl-[111px]">
-            <p className="text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-[54px]">
-              Home
-            </p>
+          {/* Rectangle 2 and Learn More Button */}
+          <div className="flex items-center">
+            <div className="relative">
+              <div className="w-screen sm:w-[396px] h-[83px] bg-white flex items-center [clip-path:path('M0_-1_h367_c-20_0_-20_85_0_85_h-367_z')]">
+                <div className="pl-[100px] ml-auto">
+                  <p className="text-3xl sm:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-[54px] pr-[60px]">
+                    Home
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center sm:ml-[-15px]">
+              <button className="w-[137px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center">
+                <span className="text-[20px] font-lato font-normal text-white">Learn More</span>
+              </button>
+              <div className="ml-[5px] w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-[-55.32deg]">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#8E8154" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Learn More Button and Arrow */}
-        <div className="flex items-center mt-[-10px] ml-[415px]">
-          <button className="w-[137px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center">
-            <span className="text-[20px] font-lato font-normal text-white">Learn More</span>
-          </button>
-          <div className="ml-[13px] w-[40px] h-[40px] bg-white rounded-[10px] flex items-center justify-center">
-            <Image
-              src="/images/arrow-right.png"
-              alt="Arrow Right"
-              width={24}
-              height={24}
-              className="brightness-0"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Rectangle 3 */}
-        <div className="relative mt-[-10px] ml-24">
-          <div className="w-[470px] h-[112px] bg-white rounded-tr-[30px] flex items-center pl-[111px]">
-            <p className="text-[24px] font-lato font-normal text-[#1C1C1C] leading-[28.8px] max-w-[310px]">
-              Amazing luxury home waiting for your presence!
-            </p>
+          {/* Rectangle 3 */}
+          <div className="relative">
+            <div className="w-screen sm:w-[590px] h-[112px] bg-white rounded-tr-[30px] flex items-center">
+              <div className="pl-[100px] ml-auto">
+                <div className="pr-[70px] max-w-[450px] flex flex-col pr-[54x]">
+                  <p className="text-xl sm:text-[24px] font-lato font-normal text-[#1C1C1C] whitespace-nowrap">
+                    Amazing luxury home waiting
+                  </p>
+                  <p className="text-xl sm:text-[24px] font-lato font-normal text-[#1C1C1C]">
+                    for your presence!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
