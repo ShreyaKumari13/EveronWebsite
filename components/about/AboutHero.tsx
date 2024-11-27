@@ -5,7 +5,7 @@ import Header from '../Header'
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center">
+    <section className="relative w-full min-h-[85vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 
@@ -23,17 +23,17 @@ export default function AboutHero() {
       <Header variant="transparent" />
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full flex items-center justify-center">
+      <div className="relative z-10 w-full flex items-center justify-center -mt-12">
         <div className="container mx-auto px-4 flex items-center justify-center">
-          <div className="w-[901px] bg-[#1C1C1C59] rounded-[15px] p-12 border border-white/20">
+          <div className="w-[901px] bg-[#1C1C1C59] rounded-[15px] py-8 px-12 border border-white/20">
             <div className="text-white text-center flex flex-col items-center">
-              <h1 className="text-5xl font-bold mb-6 w-full text-center">
+              <h1 className="text-5xl font-bold mb-4 w-full text-center">
                 Find Your Dream Property Here
               </h1>
-              <p className="text-2xl mb-4 max-w-[80%] whitespace-nowrap text-center">
+              <p className="text-2xl mb-3 max-w-[80%] whitespace-nowrap text-center">
                 Property & Mortgage Consultancy in Hong Kong | Everon
               </p>
-              <div className="font-lato text-[24px] leading-[28.8px] mb-8 font-normal text-center w-full">
+              <div className="font-lato text-[24px] leading-[28.8px] mb-6 font-normal text-center w-full">
                 <p className="mx-auto w-[600px]">Everon Property & Mortgage Consultancy Limited offers tailored</p>
                 <p className="mx-auto w-[500px]">property, mortgage, and financial services to individuals and</p>
                 <p className="mx-auto w-[350px]">corporations in Hong Kong.</p>
