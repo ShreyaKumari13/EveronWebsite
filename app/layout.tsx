@@ -4,6 +4,7 @@ import { Inter, Lato } from 'next/font/google'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ClientWrapper from '../components/ui/ClientWrapper'
+import WhatsAppButton from '../components/ui/WhatsAppButton'
 
 const inter = Inter({ subsets: ['latin'] })
 const lato = Lato({ 
@@ -31,6 +32,7 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
+        <WhatsAppButton />
       </body>
     </html>
   )
