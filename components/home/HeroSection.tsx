@@ -27,13 +27,13 @@ const HeroSection = () => {
       <Header variant="transparent" />
 
       {/* Content Container */}
-      <div className="relative z-20 w-full mt-auto">
-        <div className="container mx-auto">
+      <div className="relative z-20 w-full mt-auto md:mt-auto mt-[30vh]">
+        <div className="container mx-auto px-4 md:px-0">
           {/* Rectangle 1 */}
-          <div className="relative">
-            <div className="w-screen sm:w-[585px] h-[83px] bg-white rounded-r-[30px] flex items-center">
-              <div className="pl-[100px] ml-auto">
-                <p className="text-3xl sm:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-[54px] whitespace-nowrap pr-[90px]">
+          <div className="relative flex justify-center md:justify-start">
+            <div className="w-full md:w-[585px] h-[60px] md:h-[83px] bg-white rounded-[15px] md:rounded-r-[30px] md:rounded-l-none flex items-center">
+              <div className="px-4 md:pl-[100px] md:ml-auto w-full md:w-auto text-center md:text-left">
+                <p className="text-2xl md:text-3xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight md:leading-[54px] md:whitespace-nowrap md:pr-[90px]">
                   Buy Your Next
                 </p>
               </div>
@@ -41,26 +41,26 @@ const HeroSection = () => {
           </div>
 
           {/* Rectangle 2 and Learn More Button */}
-          <div className="flex items-center">
-            <div className="relative">
-              <div className="w-screen sm:w-[396px] h-[83px] bg-white flex items-center [clip-path:path('M0_-1_h367_c-20_0_-20_85_0_85_h-367_z')]">
-                <div className="pl-[100px] ml-auto">
-                  <p className="text-3xl sm:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-[54px] pr-[60px]">
+          <div className="flex flex-col md:flex-row items-center mt-4 md:mt-0">
+            <div className="relative w-full md:w-auto">
+              <div className="w-full md:w-[396px] h-[60px] md:h-[83px] bg-white rounded-[15px] md:rounded-none flex items-center justify-center md:justify-start">
+                <div className="px-4 md:pl-[100px] md:ml-auto">
+                  <p className="text-2xl md:text-3xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight md:leading-[54px] text-center md:text-left">
                     Home
                   </p>
                 </div>
               </div>
             </div>
-            <div className="flex items-center sm:ml-[-15px]">
+            <div className="flex items-center justify-center mt-4 md:mt-0 md:ml-[-15px]">
               <button 
                 onClick={() => router.push('/services')}
                 className="w-[180px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center gap-3 px-4 hover:bg-[#A2925F] active:bg-[#72683E] transition"
               >
-                <span className="text-[20px] font-lato font-normal text-white">Learn More</span>
-                <div className="w-[30px] h-[30px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-[16px] md:text-[20px] font-lato font-normal text-white">Learn More</span>
+                <div className="w-[25px] h-[25px] md:w-[30px] md:h-[30px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <svg
-                      width="16"
-                      height="16"
+                      width="14"
+                      height="14"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -72,20 +72,20 @@ const HeroSection = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </div>
+                </div>
               </button>
             </div>
           </div>
 
           {/* Rectangle 3 */}
-          <div className="relative">
-            <div className="w-screen sm:w-[590px] h-[112px] bg-white rounded-tr-[30px] flex items-center">
-              <div className="pl-[100px] ml-auto">
-                <div className="pr-[70px] max-w-[450px] flex flex-col pr-[54x]">
-                  <p className="text-xl sm:text-[24px] font-lato font-normal text-[#1C1C1C] whitespace-nowrap">
+          <div className="relative flex justify-center md:justify-start mt-4 md:mt-0">
+            <div className="w-full md:w-[590px] h-[90px] md:h-[112px] bg-white rounded-[15px] md:rounded-tr-[30px] md:rounded-l-none flex items-center">
+              <div className="px-4 md:pl-[100px] md:ml-auto w-full md:w-auto">
+                <div className="md:pr-[70px] md:max-w-[450px] flex flex-col items-center md:items-start">
+                  <p className="text-lg md:text-xl lg:text-[24px] font-lato font-normal text-[#1C1C1C] text-center md:text-left">
                     Amazing luxury home waiting
                   </p>
-                  <p className="text-xl sm:text-[24px] font-lato font-normal text-[#1C1C1C]">
+                  <p className="text-lg md:text-xl lg:text-[24px] font-lato font-normal text-[#1C1C1C] text-center md:text-left">
                     for your presence!
                   </p>
                 </div>
