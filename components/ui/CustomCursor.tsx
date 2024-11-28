@@ -8,33 +8,41 @@ const CustomCursor = () => {
   const [isHidden, setIsHidden] = useState(true);
 
   useEffect(() => {
-    const updateCursorPosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      setIsHidden(false);
-    };
+    // Only add event listeners if we're on desktop
+    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+      const updateCursorPosition = (e: MouseEvent) => {
+        setPosition({ x: e.clientX, y: e.clientY });
+        setIsHidden(false);
+      };
 
-    const updateCursorStyle = () => {
-      const hoveredElement = document.elementFromPoint(position.x, position.y);
-      if (hoveredElement) {
-        const computedStyle = window.getComputedStyle(hoveredElement);
-        setIsPointer(computedStyle.cursor === 'pointer');
-      }
-    };
+      const updateCursorStyle = () => {
+        const hoveredElement = document.elementFromPoint(position.x, position.y);
+        if (hoveredElement) {
+          const computedStyle = window.getComputedStyle(hoveredElement);
+          setIsPointer(computedStyle.cursor === 'pointer');
+        }
+      };
 
-    const handleMouseLeave = () => {
-      setIsHidden(true);
-    };
+      const handleMouseLeave = () => {
+        setIsHidden(true);
+      };
 
-    document.addEventListener('mousemove', updateCursorPosition);
-    document.addEventListener('mousemove', updateCursorStyle);
-    document.addEventListener('mouseleave', handleMouseLeave);
+      document.addEventListener('mousemove', updateCursorPosition);
+      document.addEventListener('mousemove', updateCursorStyle);
+      document.addEventListener('mouseleave', handleMouseLeave);
 
-    return () => {
-      document.removeEventListener('mousemove', updateCursorPosition);
-      document.removeEventListener('mousemove', updateCursorStyle);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-    };
+      return () => {
+        document.removeEventListener('mousemove', updateCursorPosition);
+        document.removeEventListener('mousemove', updateCursorStyle);
+        document.removeEventListener('mouseleave', handleMouseLeave);
+      };
+    }
   }, [position.x, position.y]);
+
+  // Don't render on mobile
+  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+    return null;
+  }
 
   if (isHidden) return null;
 
