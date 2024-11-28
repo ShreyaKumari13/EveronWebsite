@@ -2,8 +2,12 @@
 
 import Image from 'next/image'
 import Header from '../Header'
+import React from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function AboutHero() {
+  const router = useRouter();
+
   return (
     <section className="relative w-full min-h-[85vh] flex items-center">
       {/* Background Image */}
@@ -49,7 +53,10 @@ export default function AboutHero() {
               </div>
               {/* Button */}
               <div className="flex items-center justify-center mt-8">
-                <button className="w-[200px] h-[50px] bg-[#8E8154] rounded-[10px] flex items-center justify-center shadow-md hover:bg-[#A2925F] active:bg-[#72683E] transition">
+                <button 
+                  onClick={() => router.push('/services')}
+                  className="w-[200px] h-[50px] bg-[#8E8154] rounded-[10px] flex items-center justify-center shadow-md hover:bg-[#A2925F] active:bg-[#72683E] transition"
+                >
                   <span className="text-[20px] font-lato font-medium text-white mr-3">
                     Learn More
                   </span>

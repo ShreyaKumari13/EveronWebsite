@@ -3,8 +3,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Header from '@/components/Header'
+import { useRouter } from 'next/navigation'
 
 const HeroSection = () => {
+  const router = useRouter();
+
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col">
       {/* Background Image */}
@@ -49,7 +52,10 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="flex items-center sm:ml-[-15px]">
-              <button className="w-[180px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center gap-3 px-4 hover:bg-[#A2925F] active:bg-[#72683E] transition">
+              <button 
+                onClick={() => router.push('/services')}
+                className="w-[180px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center gap-3 px-4 hover:bg-[#A2925F] active:bg-[#72683E] transition"
+              >
                 <span className="text-[20px] font-lato font-normal text-white">Learn More</span>
                 <div className="w-[30px] h-[30px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <svg
