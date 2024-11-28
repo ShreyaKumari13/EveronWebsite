@@ -75,7 +75,7 @@ const WelcomeSection = () => {
             <div className="flex flex-col h-full">
               <div>
                 <div className="flex flex-col space-y-2 mb-4 sm:mb-8">
-                  <h2 className="text-3xl sm:text-4xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight sm:leading-[54px]">
+                <h2 className="text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-[54px] whitespace-nowrap">
                     Welcome to Everon Property & Mortgage
                   </h2>
                   <h2 className="text-3xl sm:text-4xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight sm:leading-[54px]">
@@ -91,7 +91,7 @@ const WelcomeSection = () => {
               </div>
 
               {/* Learn More Button */}
-              <div className="mt-8 lg:mt-auto">
+              <div className="mt-8 lg:mt-3">
                 <button className="bg-[#004400] text-white px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-[20px] font-medium rounded-lg inline-flex items-center space-x-2">
                   <span>Learn More</span>
                   <Image
@@ -106,7 +106,7 @@ const WelcomeSection = () => {
           </div>
 
           {/* Right Side - Image */}
-          <div className="relative flex justify-center items-end h-full mt-8 lg:mt-0">
+          <div className="relative flex justify-center items-end h-full lg:mt-5">
             <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[498px] lg:w-[637px] overflow-hidden">
               <Image
                 src="/images/Welcome to image.jpg"
@@ -126,4 +126,3 @@ const WelcomeSection = () => {
 };
 
 export default WelcomeSection;
-

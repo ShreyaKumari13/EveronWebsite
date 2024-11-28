@@ -7,7 +7,7 @@ const MortageService = () => {
       <div className="relative w-full max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px] h-[500px]">
           {/* Left Side - Content */}
-          <div className="relative flex flex-col pl-[100px] pt-[120px] h-full">
+          <div className="relative flex flex-col pl-[100px] pt-[60px] h-full">
             <div className="flex flex-col h-full">
               <div>
                 <div className="flex items-center">
@@ -23,7 +23,7 @@ const MortageService = () => {
                   </div>
                   {/* <h2 className="text-[24px] font-lato font-[700] text-[#1C1C1C]">Our Services</h2> */}
                 </div>
-                <p className="w-[474px] text-[40px] font-lato font-[700] text-[#1C1C1C] leading-[48px] text-left mt-4">
+                <p className="w-[474px] text-[40px] font-lato font-[700] text-[#1C1C1C] leading-[48px] text-left ">
                   Mortgage Planning
                 </p>
                 <p className="w-[511px] pt-4 text-[24px] font-lato font-[400] text-[#1C1C1C] leading-[28.8px] text-left">
@@ -34,7 +34,7 @@ const MortageService = () => {
           </div>
 
           {/* Right Side - Image */}
-          <div className="relative flex justify-end items-start pt-[20px] pr-[100px] h-full">
+          <div className="relative flex justify-end items-start pt-[55px] pr-[100px] h-full">
             <div className="relative w-[600px] h-[360px]">
               <Image
                 src="/serviceimage/Mortgage.jpg"
