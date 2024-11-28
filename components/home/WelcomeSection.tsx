@@ -11,7 +11,7 @@ const WelcomeSection = () => {
             <div className="flex flex-col h-full">
               <div>
                 <div className="flex flex-col space-y-1 sm:space-y-2 mb-3 sm:mb-4 md:mb-8">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight md:leading-[54px] whitespace-nowrap max-w-full overflow-x-auto sm:overflow-visible">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight md:leading-[54px] md:whitespace-nowrap break-words">
                     Welcome to Everon Property & Mortgage
                   </h2>
                   <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight md:leading-[54px]">
