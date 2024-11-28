@@ -21,7 +21,7 @@ const MortageService = () => {
                       className="object-contain"
                     />
                   </div>
-                  <h2 className="text-[24px] font-lato font-[700] text-[#1C1C1C]">Our Services</h2>
+                  {/* <h2 className="text-[24px] font-lato font-[700] text-[#1C1C1C]">Our Services</h2> */}
                 </div>
                 <p className="w-[474px] text-[40px] font-lato font-[700] text-[#1C1C1C] leading-[48px] text-left mt-4">
                   Mortgage Planning
