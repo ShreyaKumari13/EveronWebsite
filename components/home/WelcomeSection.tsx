@@ -91,7 +91,7 @@ const WelcomeSection = () => {
               </div>
 
               {/* Learn More Button */}
-              <div className="mt-8 lg:mt-3">
+              <div className="mt-8 lg:mt-7">
                 <button className="bg-[#004400] text-white px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-[20px] font-medium rounded-lg inline-flex items-center space-x-2">
                   <span>Learn More</span>
                   <Image
