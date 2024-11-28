@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${lato.variable} hidden md:cursor-none`}>
+      <body className={`${inter.className} ${lato.variable} md:cursor-none`}>
         <ClientWrapper />
         <div className="flex flex-col min-h-screen">
           <Header />

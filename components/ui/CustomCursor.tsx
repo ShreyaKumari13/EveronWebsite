@@ -6,10 +6,21 @@ const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
   const [isHidden, setIsHidden] = useState(true);
+  const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
-    // Only add event listeners if we're on desktop
-    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Check initial device
+    checkDevice();
+
+    // Add resize listener
+    window.addEventListener('resize', checkDevice);
+
+    // Only add mouse events if not mobile
+    if (!isMobile) {
       const updateCursorPosition = (e: MouseEvent) => {
         setPosition({ x: e.clientX, y: e.clientY });
         setIsHidden(false);
@@ -37,14 +48,14 @@ const CustomCursor = () => {
         document.removeEventListener('mouseleave', handleMouseLeave);
       };
     }
-  }, [position.x, position.y]);
+
+    return () => {
+      window.removeEventListener('resize', checkDevice);
+    };
+  }, [isMobile, position.x, position.y]);
 
   // Don't render on mobile
-  if (typeof window !== 'undefined' && window.innerWidth < 768) {
-    return null;
-  }
-
-  if (isHidden) return null;
+  if (isMobile || isHidden) return null;
 
   return (
     <>
