@@ -10,7 +10,7 @@ const FinancialService = () => {
           <div className="relative flex flex-col px-4 md:pl-[100px] pt-8 md:pt-[80px] h-full order-1 md:order-2">
             <div className="flex flex-col h-full">
               <div>
-                <div className="flex items-center">
+                <div className="flex items-center pt-6 md:pt-0">
                   <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] mr-4">
                     <Image
                       src="/serviceimage/Group 163 (1).png"
