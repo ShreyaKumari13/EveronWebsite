@@ -6,21 +6,8 @@ const PropertyService = () => {
     <div className="relative w-full">
       <div className="relative w-full max-w-[1280px] mx-auto px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[10px] md:h-[500px]">
-          {/* Left Side - Image */}
-          <div className="relative flex justify-center md:justify-start items-start pt-8 md:pt-[80px] md:pl-[100px] h-full order-2 md:order-1">
-            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px]">
-              <Image
-                src="/serviceimage/Property.jpg"
-                alt="Property Consultancy Services"
-                fill
-                className="rounded-[30px] object-cover"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Right Side - Content */}
-          <div className="relative flex flex-col px-4 md:pl-[100px] pt-8 md:pt-[80px] h-full order-1 md:order-2">
+          {/* Content Section - Shows first on mobile */}
+          <div className="relative flex flex-col px-4 md:pl-[100px] pt-8 md:pt-[80px] h-full md:order-2">
             <div className="flex flex-col h-full">
               <div>
                 <div className="flex items-center">
@@ -41,6 +28,19 @@ const PropertyService = () => {
                   We analyze market trends and craft strategies to maximize your returns while minimizing risks.
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Image Section - Shows second on mobile */}
+          <div className="relative flex justify-center md:justify-start items-start pt-8 md:pt-[80px] md:pl-[100px] h-full md:order-1">
+            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px]">
+              <Image
+                src="/serviceimage/Property.jpg"
+                alt="Property Consultancy Services"
+                fill
+                className="rounded-[30px] object-cover"
+                priority
+              />
             </div>
           </div>
         </div>

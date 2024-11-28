@@ -6,8 +6,8 @@ const MortageService = () => {
     <div className="relative w-full -mt-8 md:-mt-16">
       <div className="relative w-full max-w-[1280px] mx-auto px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[10px] md:h-[500px]">
-          {/* Left Side - Content */}
-          <div className="relative flex flex-col px-4 md:pl-[100px] pt-8 md:pt-[60px] h-full order-2 md:order-1">
+          {/* Content Section */}
+          <div className="relative flex flex-col px-4 md:pl-[100px] pt-8 md:pt-[60px] h-full">
             <div className="flex flex-col h-full">
               <div>
                 <div className="flex items-center">
@@ -32,9 +32,9 @@ const MortageService = () => {
             </div>
           </div>
 
-          {/* Right Side - Image */}
-          <div className="relative flex justify-center md:justify-end items-start pt-8 md:pt-[55px] md:pr-[100px] h-full order-1 md:order-2">
-            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px]">
+          {/* Image Section */}
+          <div className="relative flex justify-center md:justify-end items-start pt-8 md:pt-[55px] md:pr-[100px] h-full">
+            <div className="relative w-full md:w-[600px] h-[240px] md:h-[360px]">
               <Image
                 src="/serviceimage/Mortgage.jpg"
                 alt="Mortgage Service"
