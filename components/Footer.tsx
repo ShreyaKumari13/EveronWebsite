@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="relative w-full max-w-[1280px] mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-8 md:mb-12">
           {/* Logo and Address Column */}
-          <div className="md:col-span-3 md:-mt-14">
+          <div className="md:col-span-3 md:-mt-14 flex flex-col items-center md:items-start text-center md:text-left">
             <Link href="/" aria-label="Everon Home" className="block mb-4 md:mb-6">
               <Image
                 src="/images/Jo jean main logo dark 2.png"
@@ -28,8 +28,8 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links - First Column */}
-          <div className="md:col-span-3">
-            <div className="space-y-4 md:space-y-[35px]">
+          <div className="md:col-span-3 flex flex-col items-center md:items-start">
+            <div className="space-y-4 md:space-y-[35px] text-center md:text-left">
               <Link href="/" className="block text-sm md:text-[16px] font-lato hover:text-[#8E8154] transition-colors">
                 Home
               </Link>
@@ -43,8 +43,8 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links - Second Column */}
-          <div className="md:col-span-3">
-            <div className="space-y-4 md:space-y-[35px]">
+          <div className="md:col-span-3 flex flex-col items-center md:items-start">
+            <div className="space-y-4 md:space-y-[35px] text-center md:text-left">
               <Link href="/services" className="block text-sm md:text-[16px] font-lato hover:text-[#8E8154] transition-colors">
                 Services
               </Link>
@@ -58,9 +58,9 @@ const Footer = () => {
           </div>
 
           {/* Social Links Column */}
-          <div className="md:col-span-3">
-            <h3 className="text-lg md:text-[20px] font-lato font-bold mb-4 md:mb-6">Connect With Us</h3>
-            <div className="flex gap-4 md:gap-6">
+          <div className="md:col-span-3 flex flex-col items-center md:items-start">
+            <h3 className="text-lg md:text-[20px] font-lato font-bold mb-4 md:mb-6 text-center md:text-left">Connect With Us</h3>
+            <div className="flex gap-4 md:gap-6 justify-center md:justify-start">
               <Link 
                 href="https://twitter.com" 
                 target="_blank"
