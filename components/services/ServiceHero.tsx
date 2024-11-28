@@ -2,16 +2,17 @@
 
 import Image from 'next/image'
 import Header from '../Header'
-import FlashImage from '../ui/FlashImage'
 
 const ServiceHero = () => {
   return (
     <section className="relative w-full min-h-[60vh] md:min-h-[85vh] flex items-center">
       {/* Background Image */}
-      <div className="absolute inset-0 overflow-hidden">
-        <FlashImage 
+      <div className="absolute inset-0">
+        <Image 
           src="/serviceimage/Banner.jpg"
           alt="Services background"
+          fill
+          className="object-cover"
           priority
         />
         {/* Gradient Overlay */}
@@ -41,3 +42,4 @@ const ServiceHero = () => {
 }
 
 export default ServiceHero
+
