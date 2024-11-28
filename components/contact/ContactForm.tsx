@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import AnimatedButton from '../ui/AnimatedButton'
 
 const countryCodes = [
   { code: '+1', country: 'USA/Canada' },
@@ -147,12 +148,13 @@ const ContactForm = () => {
                   </div>
 
                   {/* Submit Button */}
-                  <button
+                  <AnimatedButton
                     type="submit"
-                    className="w-full bg-[#004400] text-white py-2 rounded-lg hover:bg-[#003300] transition-colors font-lato mt-4"
-                  >
-                    Send Message
-                  </button>
+                    text="Send Message"
+                    variant="submit"
+                    size="full"
+                    showArrow={false}
+                  />
                 </form>
               </div>
             </div>

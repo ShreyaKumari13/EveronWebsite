@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import AnimatedButton from '../ui/AnimatedButton';
 
 const WelcomeSection = () => {
@@ -42,11 +41,9 @@ const WelcomeSection = () => {
             <div className="relative w-full h-[300px] md:h-[400px] lg:h-[498px] lg:w-[637px] overflow-hidden">
               <Image
                 src="/images/Welcome to image.jpg"
-                alt="House"
+                alt="Welcome to Everon"
                 fill
-                className="rounded-[30px] object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 637px"
-                quality={100}
+                className="object-cover rounded-[30px]"
                 priority
               />
             </div>
