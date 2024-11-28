@@ -54,7 +54,7 @@ const HeroSection = () => {
             <div className="flex items-center justify-center mt-4 md:mt-0 md:ml-[-15px] pl-4 md:pl-5">
               <button 
                 onClick={() => router.push('/services')}
-                className="w-[180px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center gap-3 px-4 hover:bg-[#A2925F] active:bg-[#72683E] transition"
+                className="w-[180px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center gap-3 px-4 hover:bg-[#A2925F] active:bg-[#72683E] transition-all duration-300 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_0_3px_rgba(142,129,84,0.2)]"
               >
                 <span className="text-[16px] md:text-[20px] font-lato font-normal text-white">Learn More</span>
                 <div className="w-[25px] h-[25px] md:w-[30px] md:h-[30px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
