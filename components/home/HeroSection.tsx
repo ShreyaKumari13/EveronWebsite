@@ -43,7 +43,7 @@ const HeroSection = () => {
           {/* Rectangle 2 and Learn More Button */}
           <div className="flex flex-col md:flex-row items-center mt-4 md:mt-0">
             <div className="relative w-full md:w-auto">
-              <div className="w-full md:w-[396px] h-[60px] md:h-[83px] bg-white rounded-[15px] md:rounded-none flex items-center justify-center md:justify-start">
+              <div className="w-full md:w-[396px] h-[60px] md:h-[83px] bg-white rounded-[15px] md:rounded-none md:rounded-r-[30px] flex items-center justify-center md:justify-start">
                 <div className="px-4 md:pl-[100px] md:ml-auto">
                   <p className="text-2xl md:text-3xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight md:leading-[54px] text-center md:text-left">
                     Home
@@ -51,7 +51,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center mt-4 md:mt-0 md:ml-[-15px]">
+            <div className="flex items-center justify-center mt-4 md:mt-0 md:ml-[-15px] pl-4 md:pl-5">
               <button 
                 onClick={() => router.push('/services')}
                 className="w-[180px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center gap-3 px-4 hover:bg-[#A2925F] active:bg-[#72683E] transition"
