@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import FlashImage from '../ui/FlashImage'
 
 const WhyChooseUsSection = () => {
   const features = [
@@ -44,35 +45,24 @@ const WhyChooseUsSection = () => {
           {/* Right Column - Images */}
           <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-0">
             <div className="relative flex flex-col space-y-4">
-              <div className="relative w-full h-[200px] md:h-[241px] overflow-hidden">
-                <Image
+              <div className="relative w-full h-[200px] md:h-[241px] overflow-hidden rounded-[30px]">
+                <FlashImage
                   src="/images/Why choose us 1.jpg"
                   alt="Why Choose Us Image 1"
-                  fill
-                  className="rounded-[30px] object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={100}
+                  priority
                 />
               </div>
-              <div className="relative w-full h-[200px] md:h-[241px] overflow-hidden">
-                <Image
+              <div className="relative w-full h-[200px] md:h-[241px] overflow-hidden rounded-[30px]">
+                <FlashImage
                   src="/images/Why choose us 2.jpg"
                   alt="Why Choose Us Image 2"
-                  fill
-                  className="rounded-[30px] object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={100}
                 />
               </div>
             </div>
-            <div className="relative h-[300px] sm:h-[498px] overflow-hidden mt-4 sm:mt-0">
-              <Image
+            <div className="relative h-[300px] sm:h-[498px] overflow-hidden rounded-[30px] mt-4 sm:mt-0">
+              <FlashImage
                 src="/images/Why choose us 3.jpg"
                 alt="Why Choose Us Image 3"
-                fill
-                className="rounded-[30px] object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                quality={100}
               />
             </div>
           </div>
@@ -83,5 +73,3 @@ const WhyChooseUsSection = () => {
 }
 
 export default WhyChooseUsSection
-
-

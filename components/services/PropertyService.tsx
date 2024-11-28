@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import FlashImage from '../ui/FlashImage';
 
 const PropertyService = () => {
   return (
@@ -33,12 +34,10 @@ const PropertyService = () => {
 
           {/* Image Section - Shows second on mobile */}
           <div className="relative flex justify-center md:justify-start items-start pt-8 md:pt-[80px] md:pl-[100px] h-full md:order-1">
-            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px]">
-              <Image
+            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px] overflow-hidden rounded-[30px]">
+              <FlashImage
                 src="/serviceimage/Property.jpg"
                 alt="Property Consultancy Services"
-                fill
-                className="rounded-[30px] object-cover"
                 priority
               />
             </div>

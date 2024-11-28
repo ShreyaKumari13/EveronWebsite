@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import FlashImage from '../ui/FlashImage';
 
 const WhoWeAre = () => {
   return (
@@ -30,12 +31,10 @@ const WhoWeAre = () => {
 
           {/* Right Side - Image */}
           <div className="relative flex justify-center md:justify-start items-start pt-8 md:pt-[80px] md:pl-[10px] h-full">
-            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px]">
-              <Image
+            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px] overflow-hidden rounded-[30px]">
+              <FlashImage
                 src="/aboutimage/Who we are.jpg"
                 alt="House"
-                fill
-                className="rounded-[30px] object-cover"
                 priority
               />
             </div>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import AnimatedButton from '../ui/AnimatedButton';
+import FlashImage from '../ui/FlashImage';
 
 const WelcomeSection = () => {
   return (
@@ -38,12 +39,10 @@ const WelcomeSection = () => {
 
           {/* Right Side - Image */}
           <div className="relative flex justify-center items-end h-full lg:mt-5">
-            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[498px] lg:w-[637px] overflow-hidden">
-              <Image
+            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[498px] lg:w-[637px] overflow-hidden rounded-[30px]">
+              <FlashImage
                 src="/images/Welcome to image.jpg"
                 alt="Welcome to Everon"
-                fill
-                className="object-cover rounded-[30px]"
                 priority
               />
             </div>

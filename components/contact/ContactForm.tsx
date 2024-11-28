@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import AnimatedButton from '../ui/AnimatedButton'
+import FlashImage from '../ui/FlashImage'
 
 const countryCodes = [
   { code: '+1', country: 'USA/Canada' },
@@ -27,14 +27,11 @@ const ContactForm = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4 py-4">
             {/* Left Section - Image */}
             <div className="w-full lg:w-1/2 h-[650px]">
-              <div className="relative w-full h-full">
-                <Image
+              <div className="relative w-full h-full overflow-hidden rounded-[30px]">
+                <FlashImage
                   src="/contactimage/Contact Us.jpg"
                   alt="Contact Us Building"
-                  fill
-                  className="rounded-[30px] object-cover"
-                  sizes="(max-width: 800px) 100vw, 50vw"
-                  quality={100}
+                  priority
                 />
               </div>
             </div>

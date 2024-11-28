@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import FlashImage from '../ui/FlashImage';
 
 const MortageService = () => {
   return (
@@ -34,13 +35,10 @@ const MortageService = () => {
 
           {/* Image Section */}
           <div className="relative flex justify-center md:justify-end items-start pt-8 md:pt-[55px] md:pr-[100px] h-full">
-            <div className="relative w-full md:w-[600px] h-[240px] md:h-[360px]">
-              <Image
+            <div className="relative w-full md:w-[600px] h-[240px] md:h-[360px] overflow-hidden rounded-[30px]">
+              <FlashImage
                 src="/serviceimage/Mortgage.jpg"
                 alt="Mortgage Service"
-                fill
-                className="rounded-[30px] object-cover"
-                sizes="(max-width: 768px) 100vw, 600px"
                 priority
               />
             </div>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import FlashImage from '../ui/FlashImage';
 
 const OurExpertise = () => {
   return (
@@ -33,12 +34,10 @@ const OurExpertise = () => {
 
           {/* Right Side - Image */}
           <div className="relative flex justify-center md:justify-start items-start pt-8 md:pt-[20px] md:pl-[100px] h-full">
-            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px]">
-              <Image
+            <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px] overflow-hidden rounded-[30px]">
+              <FlashImage
                 src="/aboutimage/Our Expertise.jpg"
                 alt="Team of experts discussing"
-                fill
-                className="rounded-[30px] object-cover"
                 priority
               />
             </div>
@@ -50,4 +49,3 @@ const OurExpertise = () => {
 };
 
 export default OurExpertise;
-

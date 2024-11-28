@@ -3,6 +3,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from "next/image"
 import { useState } from "react"
+import FlashImage from './ui/FlashImage'
 
 interface Testimonial {
   id: number
@@ -71,14 +72,10 @@ const TestimonialSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Project Image */}
-          <div className="relative h-[300px] md:h-[498px] w-full overflow-hidden">
-            <Image
+          <div className="relative h-[300px] md:h-[498px] w-full overflow-hidden rounded-[30px]">
+            <FlashImage
               src={testimonials[currentIndex].projectImage}
               alt={testimonials[currentIndex].projectName}
-              fill
-              className="rounded-[30px] object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              quality={100}
               priority
             />
           </div>
@@ -101,11 +98,9 @@ const TestimonialSection = () => {
               </blockquote>
               <div className="flex items-center gap-4">
                 <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden">
-                  <Image
+                  <FlashImage
                     src={testimonials[currentIndex].authorImage}
                     alt={testimonials[currentIndex].author}
-                    fill
-                    className="object-cover"
                   />
                 </div>
                 <div>
