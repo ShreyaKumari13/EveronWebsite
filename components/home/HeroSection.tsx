@@ -9,17 +9,15 @@ const HeroSection = () => {
     <section className="relative w-full min-h-[85vh] flex flex-col">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image 
+        <img
           src="/images/Banner updated.png"
           alt="Luxury home background"
-          fill
-          className="object-cover w-full"
-          priority
+          className="object-cover w-full h-full"
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
       </div>
-      
+
       {/* Header */}
       <Header variant="transparent" />
 
@@ -54,7 +52,7 @@ const HeroSection = () => {
               </button>
               <div className="ml-[5px] w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-[-55.32deg]">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#8E8154" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#8E8154" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
             </div>

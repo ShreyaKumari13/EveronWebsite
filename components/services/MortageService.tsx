@@ -7,7 +7,7 @@ const MortageService = () => {
       <div className="relative w-full max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px] h-[500px]">
           {/* Left Side - Content */}
-          <div className="relative flex flex-col pl-[100px] pt-[80px] h-full">
+          <div className="relative flex flex-col pl-[100px] pt-[120px] h-full">
             <div className="flex flex-col h-full">
               <div>
                 <div className="flex items-center">
