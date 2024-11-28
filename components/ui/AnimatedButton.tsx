@@ -38,7 +38,7 @@ const AnimatedButton = ({
         {text}
       </span>
       {showArrow && (
-        <div className={`bg-white rounded-full flex items-center justify-center flex-shrink-0 ${
+        <div className={`bg-white rounded-full flex items-center justify-center flex-shrink-0 transform transition-transform duration-300 group-hover:translate-x-2 ${
           size === 'large' ? 'w-[30px] h-[30px] md:w-[35px] md:h-[35px]' : 'w-[25px] h-[25px] md:w-[30px] md:h-[30px]'
         }`}>
           <svg
