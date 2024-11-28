@@ -8,9 +8,9 @@ const HeroSection = () => {
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full">
         <img
-          src="/images/Banner updated.png"
+          src="/images/Banner Image.jpg"
           alt="Luxury home background"
           className="object-cover w-full h-full"
         />
