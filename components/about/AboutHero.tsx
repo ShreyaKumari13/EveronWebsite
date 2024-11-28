@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Header from '../Header'
 import React from 'react'
 import { useRouter } from 'next/navigation'
+import AnimatedButton from '../ui/AnimatedButton'
 
 export default function AboutHero() {
   const router = useRouter();
@@ -49,31 +50,11 @@ export default function AboutHero() {
               </div>
               {/* Button */}
               <div className="flex items-center justify-center mt-6 md:mt-8">
-                <button 
+                <AnimatedButton
                   onClick={() => router.push('/services')}
-                  className="w-[180px] md:w-[200px] h-[45px] md:h-[50px] bg-[#8E8154] rounded-[10px] flex items-center justify-center shadow-md hover:bg-[#A2925F] active:bg-[#72683E] transition"
-                >
-                  <span className="text-base md:text-[20px] font-lato font-medium text-white mr-2 md:mr-3">
-                    Learn More
-                  </span>
-                  <div className="w-[30px] h-[30px] md:w-[35px] md:h-[35px] bg-white rounded-full flex items-center justify-center">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="md:w-5 md:h-5"
-                    >
-                      <path
-                        d="M5 12H19M19 12L12 5M19 12L12 19"
-                        stroke="#8E8154"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </button>
+                  text="Learn More"
+                  size="large"
+                />
               </div>
             </div>
           </div>
@@ -82,4 +63,3 @@ export default function AboutHero() {
     </section>
   )
 }
-

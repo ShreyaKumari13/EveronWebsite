@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import AnimatedButton from '../ui/AnimatedButton';
 
 const WelcomeSection = () => {
   return (
@@ -28,15 +29,10 @@ const WelcomeSection = () => {
 
               {/* Learn More Button */}
               <div className="mt-8 lg:mt-7">
-                <button className="bg-[#004400] text-white px-4 md:px-6 py-2 md:py-3 text-base md:text-[20px] font-medium rounded-lg inline-flex items-center space-x-2">
-                  <span>Learn More</span>
-                  <Image
-                    src="/images/Group 5.png"
-                    alt="Arrow Right"
-                    width={24}
-                    height={24}
-                  />
-                </button>
+                <AnimatedButton
+                  variant="green"
+                  text="Learn More"
+                />
               </div>
             </div>
           </div>

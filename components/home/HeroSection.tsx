@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import { useRouter } from 'next/navigation'
+import AnimatedButton from '../ui/AnimatedButton'
 
 const HeroSection = () => {
   const router = useRouter();
@@ -52,28 +53,10 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="flex items-center justify-center mt-4 md:mt-0 md:ml-[-15px] pl-4 md:pl-5">
-              <button 
+              <AnimatedButton 
                 onClick={() => router.push('/services')}
-                className="w-[180px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center gap-3 px-4 hover:bg-[#A2925F] active:bg-[#72683E] transition-all duration-300 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_0_3px_rgba(142,129,84,0.2)]"
-              >
-                <span className="text-[16px] md:text-[20px] font-lato font-normal text-white">Learn More</span>
-                <div className="w-[25px] h-[25px] md:w-[30px] md:h-[30px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5 12H19M19 12L12 5M19 12L12 19"
-                        stroke="#8E8154"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                </div>
-              </button>
+                text="Learn More"
+              />
             </div>
           </div>
 
