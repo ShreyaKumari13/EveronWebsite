@@ -9,13 +9,15 @@ const HeroSection = () => {
     <section className="relative w-full min-h-[85vh] flex flex-col">
       {/* Background Image */}
       <div className="absolute inset-0 w-full">
-        <img
-          src="/images/Banner Image.jpg"
-          alt="Luxury home background"
-          className="object-cover w-full h-full"
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
+        <div className="relative w-full h-full border-[10px] border-[#FFFFFF]">
+          <img
+            src="/images/Banner Image.jpg"
+            alt="Luxury home background"
+            className="object-cover w-full h-full"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
+        </div>
       </div>
       
       {/* Header */}
@@ -47,14 +49,25 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="flex items-center sm:ml-[-15px]">
-              <button className="w-[137px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center">
+              <button className="w-[180px] h-[40px] bg-[#8E8154] rounded-[10px] flex items-center justify-center gap-3 px-4 hover:bg-[#A2925F] active:bg-[#72683E] transition">
                 <span className="text-[20px] font-lato font-normal text-white">Learn More</span>
+                <div className="w-[30px] h-[30px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12H19M19 12L12 5M19 12L12 19"
+                        stroke="#8E8154"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
               </button>
-              <div className="ml-[5px] w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-[-55.32deg]">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#8E8154" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
             </div>
           </div>
 
@@ -80,4 +93,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection
-

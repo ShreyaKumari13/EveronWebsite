@@ -49,30 +49,29 @@ export default function AboutHero() {
               </div>
               {/* Button */}
               <div className="flex items-center justify-center mt-8">
-                <button className="w-[150px] h-[50px] bg-[#8E8154] rounded-[10px] flex items-center justify-center shadow-md hover:bg-[#A2925F] transition">
-                  <span className="text-[20px] font-lato font-medium text-white">
+                <button className="w-[200px] h-[50px] bg-[#8E8154] rounded-[10px] flex items-center justify-center shadow-md hover:bg-[#A2925F] active:bg-[#72683E] transition">
+                  <span className="text-[20px] font-lato font-medium text-white mr-3">
                     Learn More
                   </span>
+                  <div className="w-[35px] h-[35px] bg-white rounded-full flex items-center justify-center">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12H19M19 12L12 5M19 12L12 19"
+                        stroke="#8E8154"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </button>
-                <div className="ml-4 w-[50px] h-[50px] bg-white rounded-full flex items-center justify-center shadow-md">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="rotate-[-55.32deg]"
-                  >
-                    <path
-                      d="M5 12H19M19 12L12 5M19 12L12 19"
-                      stroke="#8E8154"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
               </div>
+
             </div>
           </div>
         </div>
