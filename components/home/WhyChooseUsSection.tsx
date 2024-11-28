@@ -108,7 +108,7 @@ const WhyChooseUsSection = () => {
       <div className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column - Content */}
-          <div className="relative">
+          <div className="relative pl-[90px]">
             <h2 className="text-2xl sm:text-3xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] mb-6 sm:mb-[28px]">
               WHY CHOOSE US?
             </h2>

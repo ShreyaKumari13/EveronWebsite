@@ -46,7 +46,7 @@ const TestimonialSection = () => {
     <section className="w-full">
       <div className="relative w-full max-w-[1280px] mx-auto py-8 px-4 md:px-0">
         <div className="flex flex-col md:flex-row items-start justify-between mb-12">
-          <div className="relative pl-4 md:pl-[100px]">
+          <div className="relative pl-4 md:pl-[120px]">
             <h2 className="text-[32px] md:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-[54px]">
               WHAT OUR <span className="text-[#8E8154]">CLIENT SAY</span>
             </h2>

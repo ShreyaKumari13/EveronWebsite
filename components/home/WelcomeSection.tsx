@@ -71,7 +71,7 @@ const WelcomeSection = () => {
       <div className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[10px]">
           {/* Left Side - Content */}
-          <div className="relative flex flex-col h-full">
+          <div className="relative flex flex-col h-full pl-[80px]">
             <div className="flex flex-col h-full">
               <div>
                 <div className="flex flex-col space-y-2 mb-4 sm:mb-8">
