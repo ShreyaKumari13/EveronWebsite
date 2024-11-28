@@ -51,7 +51,7 @@ const TestimonialSection = () => {
               WHAT OUR <span className="text-[#8E8154]">CLIENT SAY</span>
             </h2>
           </div>
-          <div className="flex gap-4 mt-4 md:mt-0">
+          <div className="flex gap-4 mt-4 md:mt-0 justify-center md:justify-start">
             <button
               onClick={prevSlide}
               className="p-1 md:p-2 rounded-full border border-[#8E8154] hover:bg-[#8E8154] hover:text-white transition-colors"
@@ -123,4 +123,3 @@ const TestimonialSection = () => {
 }
 
 export default TestimonialSection
-
