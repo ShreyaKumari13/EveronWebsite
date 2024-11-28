@@ -18,10 +18,10 @@ const WhoWeAre = () => {
                     Consultancy Limited
                   </h2>
                 </div>
-                <p className="w-[474px] text-[40px] font-lato font-[700] text-[#1C1C1C] leading-[48px] text-left mb-3">
+                <p className="w-[474px] text-[40px] font-lato font-[700] text-[#1C1C1C] leading-[48px] text-left pt-[15px] pb-[25px] ">
                   Who We Are
                 </p>
-                <p className="w-[511px] mt-4 text-[24px] font-lato font-[400] text-[#1C1C1C] leading-[28.8px] text-left">
+                <p className="w-[511px] text-[24px] font-lato font-[400] text-[#1C1C1C] leading-[28.8px] text-left">
                   Everon Property & Mortgage Consultancy Limited is a trusted name in the consultancy sector, specializing in property, mortgage, and financial services. Based in the heart of Tsim Sha Tsui, Kowloon, we have been empowering individuals and businesses with tailored financial solutions.
                 </p>
               </div>
