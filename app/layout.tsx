@@ -16,6 +16,13 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: 'Everon Property & Mortgage Consultancy Limited',
   description: 'Your Trusted Partner for Property & Financial Solutions',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/logo.png', type: 'image/png' }
+    ],
+    apple: '/images/logo.png'
+  },
 }
 
 export default function RootLayout({
