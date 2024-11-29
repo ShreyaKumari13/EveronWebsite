@@ -6,25 +6,21 @@ const services = [
         imageSrc: "/serviceproperty/analysis.png",
         title: "Analysis",
         description: "In-depth market analysis to identify lucrative opportunities.",
-        highlighted: false,
     },
     {
         imageSrc: "/serviceproperty/valuation.png",
         title: "Valuation",
         description: "Assistance in evaluating property values and negotiating deals.",
-        highlighted: false,
     },
     {
         imageSrc: "/serviceproperty/strategy.png",
         title: "Strategy",
         description: "Expert guidance on investment strategies for long-term gains.",
-        highlighted: true,
     },
     {
         imageSrc: "/serviceproperty/compliance.png",
         title: "Compliance",
         description: "Legal and regulatory advice to simplify property transactions.",
-        highlighted: false,
     },
 ]
 
@@ -49,8 +45,7 @@ export default function WhatWeOffer() {
                 {services.map((service, index) => (
                     <Card
                         key={index}
-                        className={`relative bg-[#f5f0e9] border-0 min-h-[240px] ${service.highlighted ? 'ring-2 ring-blue-400' : ''
-                            }`}
+                        className="relative bg-[#f5f0e9] border-0 min-h-[240px]"
                     >
                         <div className="pt-6 pb-2 flex justify-center">
                             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden">
