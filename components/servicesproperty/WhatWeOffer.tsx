@@ -52,8 +52,8 @@ export default function WhatWeOffer() {
                                 <Image
                                     src={service.imageSrc}
                                     alt={service.title}
-                                    width={40}
-                                    height={40}
+                                    width={32}
+                                    height={32}
                                     className="object-contain"
                                 />
                             </div>
