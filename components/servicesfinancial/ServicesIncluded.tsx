@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import FlashImage from '../ui/FlashImage'
 
 const services = [
     {
@@ -35,16 +34,15 @@ export default function ServicesIncluded() {
                 <p className="font-lato text-[24px] font-[400] leading-[28.8px] text-left text-underline-position-from-font decoration-skip-ink-none mb-4">
                     At <span className="font-lato text-[24px] font-[600] leading-[28.8px]">Everon Property & Mortgage Consultancy Limited</span>, we understand that every financial journey is unique. That's why we offer a range of <span className="font-lato text-[24px] font-[600] leading-[28.8px]">tailored financial solutions</span> to suit both individuals and businesses.
                 </p>
-
             </div>
+
             <div className="grid grid-cols-[35%,60%] gap-8 md:gap-12 items-start pb-8">
                 {/* Left Side - Heading */}
-                <div className="relative flex flex-col justify-start items-start  text-left">
-  <h2 className="font-lato text-[40px] font-[700] leading-[48px] text-left text-underline-position-from-font decoration-skip-ink-none">
-    Our Financial Planning <br /> Services Include:
-  </h2>
-</div>
-
+                <div className="relative flex flex-col justify-start items-start text-left">
+                    <h2 className="font-lato text-[40px] font-[700] leading-[48px] text-left text-underline-position-from-font decoration-skip-ink-none">
+                        Our Financial Planning <br /> Services Include:
+                    </h2>
+                </div>
 
                 {/* Right Side - Paragraph */}
                 <div className="relative flex flex-col">
@@ -53,8 +51,6 @@ export default function ServicesIncluded() {
                     </p>
                 </div>
             </div>
-
-
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {services.map((service, index) => (
