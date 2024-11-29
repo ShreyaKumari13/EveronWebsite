@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import FlashImage from '../ui/FlashImage'
 
 const services = [
     {
@@ -27,6 +28,34 @@ const services = [
 export default function ServicesIncluded() {
     return (
         <section className="px-4 py-12 mx-auto max-w-7xl">
+            <div className="mb-12">
+                <h2 className="font-lato text-[40px] font-[700] leading-[48px] text-left text-underline-position-from-font decoration-skip-ink-none mb-4">
+                    Financial Solutions
+                </h2>
+                <p className="font-lato text-[24px] font-[400] leading-[28.8px] text-left text-underline-position-from-font decoration-skip-ink-none mb-4">
+                    At <span className="font-lato text-[24px] font-[600] leading-[28.8px]">Everon Property & Mortgage Consultancy Limited</span>, we understand that every financial journey is unique. That's why we offer a range of <span className="font-lato text-[24px] font-[600] leading-[28.8px]">tailored financial solutions</span> to suit both individuals and businesses.
+                </p>
+
+            </div>
+            <div className="grid grid-cols-[35%,60%] gap-8 md:gap-12 items-start pb-8">
+                {/* Left Side - Heading */}
+                <div className="relative flex flex-col justify-start items-start  text-left">
+  <h2 className="font-lato text-[40px] font-[700] leading-[48px] text-left text-underline-position-from-font decoration-skip-ink-none">
+    Our Financial Planning <br /> Services Include:
+  </h2>
+</div>
+
+
+                {/* Right Side - Paragraph */}
+                <div className="relative flex flex-col">
+                    <p className="w-full font-lato text-[24px] font-[400] leading-[28.8px] text-left text-underline-position-from-font decoration-skip-ink-none text-[#1C1C1C]">
+                        Financial planning and management are essential to achieving your personal and business goals. We offer a wide range of tailored financial solutions designed to address the diverse needs of individuals and organizations. Here's how our expertise can help secure your financial future:
+                    </p>
+                </div>
+            </div>
+
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {services.map((service, index) => (
                     <Card
