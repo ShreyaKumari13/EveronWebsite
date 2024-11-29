@@ -26,12 +26,12 @@ const PropertyService = () => {
                 <p className="w-full md:w-[474px] text-3xl md:text-[40px] font-lato font-bold text-[#1C1C1C] leading-tight md:leading-[48px] text-left mt-4">
                   Property Consultancy Services
                 </p>
-                <p className="w-full md:w-[511px] pt-4 text-lg md:text-[24px] font-lato font-normal text-[#1C1C1C] leading-normal md:leading-[28.8px] text-left">
+                <p className="w-full pb-5 md:w-[511px] pt-4 text-lg md:text-[24px] font-lato font-normal text-[#1C1C1C] leading-normal md:leading-[28.8px] text-left">
                   Whether you&apos;re buying, selling, or investing, our experts provide tailored advice to help you make informed decisions.
                   We analyze market trends and craft strategies to maximize your returns while minimizing risks.
                 </p>
               </div>
-              <div className="flex items-center justify-start mt-4 md:mt-0 pl-4 md:pl-5">
+              <div className="flex  justify-start mt-4 md:mt-0 pl-4 md:pl-5">
                 <Link href="/serviceproperty">
                   <AnimatedButton
                     variant="dark-green"
