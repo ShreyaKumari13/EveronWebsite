@@ -89,12 +89,13 @@ export default function ServicesIncluded() {
                                 transform hover:scale-[1.02] 
                                 transition-all duration-300 
                                 shadow-sm hover:shadow-lg
-                                ${index === 1 ? 'bg-[#F0E9DD]' : ''}`}
+                                bg-white hover:bg-[#F0E9DD]
+                                group`}
                     >
                         <div>
                             <div className="pt-4 sm:pt-6 pb-2 flex justify-center">
                                 <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 
-                                            ${index === 1 ? 'bg-white' : 'bg-[#F0E9DD]'} 
+                                            bg-[#F0E9DD] group-hover:bg-white
                                             rounded-full 
                                             flex items-center justify-center 
                                             shadow-lg 
@@ -106,7 +107,11 @@ export default function ServicesIncluded() {
                                         alt={service.title}
                                         width={32}
                                         height={32}
-                                        className="object-contain w-6 sm:w-7 md:w-8"
+                                        className={`object-contain w-6 sm:w-7 md:w-8 transition-all duration-300 ${
+                                            service.title === "Corporate Financial Strategies" 
+                                            ? "brightness-0 sepia-[.50] saturate-[2] hue-rotate-[335deg] brightness-[1.2] group-hover:brightness-100 group-hover:sepia-0 group-hover:saturate-100 group-hover:hue-rotate-0"
+                                            : ""
+                                        }`}
                                     />
                                 </div>
                             </div>
