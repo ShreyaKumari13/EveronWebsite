@@ -104,7 +104,7 @@
 //                 <AnimatedButton
 //                   text="Visit our Property ERP link"
 //                   variant="primary"
-//                   className="w-[220px] md:w-[250px] px-2 py-3 text-sm md:text-[16px] font-lato font-medium"
+//                   className="w-[280px] md:w-[280px] px-2 py-3 text-sm md:text-[16px] font-lato font-medium whitespace-nowrap"
 //                   showArrow={false}
 //                 />
 //               </Link>
@@ -229,7 +229,7 @@ const Footer = () => {
                 <AnimatedButton
                   text="Visit our Property ERP link"
                   variant="primary"
-                  className="w-[220px] md:w-[250px] px-2 py-3 text-sm md:text-[16px] font-lato font-medium"
+                  className="w-[280px] md:w-[280px] px-2 py-3 text-sm md:text-[16px] font-lato font-medium whitespace-nowrap"
                   showArrow={false}
                 />
               </Link>
