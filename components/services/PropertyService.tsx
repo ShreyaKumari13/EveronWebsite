@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import FlashImage from '../ui/FlashImage';
+import AnimatedButton from '../ui/AnimatedButton';
+import Link from 'next/link';
 
 const PropertyService = () => {
   return (
@@ -28,6 +30,13 @@ const PropertyService = () => {
                   Whether you&apos;re buying, selling, or investing, our experts provide tailored advice to help you make informed decisions. 
                   We analyze market trends and craft strategies to maximize your returns while minimizing risks.
                 </p>
+              </div>
+              <div className="flex items-center justify-center mt-4 md:mt-0 md:ml-[-15px] pl-4 md:pl-5">
+                <Link href="/serviceproperty">
+                  <AnimatedButton 
+                    text="Learn More"
+                  />
+                </Link>
               </div>
             </div>
           </div>

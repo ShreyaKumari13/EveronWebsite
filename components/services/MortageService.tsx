@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import FlashImage from '../ui/FlashImage';
+import AnimatedButton from '../ui/AnimatedButton';
+import Link from 'next/link';
 
 const MortageService = () => {
   return (
@@ -29,6 +31,13 @@ const MortageService = () => {
                 <p className="w-full md:w-[511px] pt-4 text-lg md:text-[24px] font-lato font-normal text-[#1C1C1C] leading-normal md:leading-[28.8px] text-left">
                   We help you secure the most competitive mortgage rates and favorable terms for your needs. Our experts simplify the complexities of property financing, ensuring a smooth and stress-free process. Trust us to guide you every step of the way.
                 </p>
+              </div>
+              <div className="flex items-center justify-center mt-4 md:mt-0 md:ml-[-15px] pl-4 md:pl-5">
+                <Link href="/mortgage">
+                  <AnimatedButton 
+                    text="Learn More"
+                  />
+                </Link>
               </div>
             </div>
           </div>
