@@ -59,7 +59,7 @@ const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
                 <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                   <Link href="/serviceproperty" className="block px-4 py-2 text-sm text-[#00492C] hover:bg-gray-100" role="menuitem">Property Consultancy</Link>
                   <Link href="/mortgage" className="block px-4 py-2 text-sm text-[#00492C] hover:bg-gray-100" role="menuitem">Mortgage Planning</Link>
-                  <Link href="/services/financial" className="block px-4 py-2 text-sm text-[#00492C] hover:bg-gray-100" role="menuitem">Financial Consultancy</Link>
+                  <Link href="/financialplanning" className="block px-4 py-2 text-sm text-[#00492C] hover:bg-gray-100" role="menuitem">Financial Planning</Link>
                 </div>
               </div>
             </div>
