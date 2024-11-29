@@ -5,6 +5,7 @@ import FlashImage from '../ui/FlashImage';
 const MortgageMoney = () => {
     return (
         <section className="px-4 py-8 mx-auto max-w-7xl">
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[10px]">
                 {/* Left Side - Image */}
 
@@ -13,19 +14,23 @@ const MortgageMoney = () => {
                     <div className="flex flex-col">
                         <div>
                             <ul className="w-full md:w-[511px] pt-4 text-lg md:text-[24px] font-lato font-normal text-[#1C1C1C] leading-normal md:leading-[28.8px] text-left list-none">
-                                <li className="flex items-start mb-6">
+                                <li className="flex items-start mb-6 pt-2">
                                     <span className="mr-2 mt-2">•</span>
-                                    <span>Strong relationships with leading financial institutions.
-
+                                    <span>Personalized mortgage assessments based on your financial profile.
                                     </span>
                                 </li>
                                 <li className="flex items-start mb-6">
                                     <span className="mr-2 mt-2">•</span>
-                                    <span>Transparent and unbiased recommendations.</span>
+                                    <span>Identifying competitive mortgage rates tailored to your budget.</span>
                                 </li>
-                                <li className="flex items-start">
+                                <li className="flex items-start mb-6">
                                     <span className="mr-2 mt-2">•</span>
-                                    <span>Streamlined processes to save you time and effort.</span>
+                                    <span>Assisting with documentation and ensuring compliance with lending regulations.</span>
+                                </li>
+                                <li className="flex items-start mb-6">
+                                    <span className="mr-2 mt-2">•</span>
+                                    <span>
+                                        Expert advice on refinancing options to reduce long-term costs.</span>
                                 </li>
                             </ul>
                         </div>

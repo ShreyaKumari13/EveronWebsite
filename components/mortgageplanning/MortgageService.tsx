@@ -5,6 +5,17 @@ import FlashImage from '../ui/FlashImage';
 const MortgageService = () => {
     return (
         <section className="px-4 py-8 mx-auto max-w-7xl">
+            <div className="mb-12">
+                <h2 className="font-lato text-[40px] font-[700] leading-[48px] text-left text-underline-position-from-font decoration-skip-ink-none mb-4">
+                    Mortgage Planning
+                </h2>
+                <p className="font-lato text-[24px] font-[400] leading-[28.8px] text-left text-underline-position-from-font decoration-skip-ink-none mb-4">
+                    Navigating the complexities of property financing can be daunting, but with <span className="font-lato text-[24px] font-[600] leading-[28.8px]">Everon Property & Mortgage Consultancy Limited</span>, you're in expert hands.
+                </p>
+                <p className="font-lato text-[24px] font-[400] leading-[28.8px] text-left text-underline-position-from-font decoration-skip-ink-none">
+                    We specialize in helping you <span className="font-lato text-[24px] font-[600] leading-[28.8px]">secure the best mortgage rates</span> and terms to make your property dreams a reality.
+                </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[10px]">
                 {/* Left Side - Image */}
                 <div className="relative flex justify-center items-start pt-8 md:pt-[1px]">
