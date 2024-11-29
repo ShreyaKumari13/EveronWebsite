@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import AnimatedButton from '../ui/AnimatedButton';
 import FlashImage from '../ui/FlashImage';
+import Link from 'next/link';
 
 const WelcomeSection = () => {
   return (
@@ -29,10 +30,12 @@ const WelcomeSection = () => {
 
               {/* Learn More Button */}
               <div className="mt-8 lg:mt-7">
-                <AnimatedButton
-                  variant="green"
-                  text="Learn More"
-                />
+                <Link href="/services">
+                  <AnimatedButton
+                    variant="green"
+                    text="Learn More"
+                  />
+                </Link>
               </div>
             </div>
           </div>
