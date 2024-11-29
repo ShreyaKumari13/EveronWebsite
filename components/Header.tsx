@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 interface HeaderProps {
   variant?: 'transparent' | 'solid'
@@ -12,6 +13,7 @@ interface HeaderProps {
 const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false)
+  const router = useRouter()
 
   const textColor = variant === 'transparent' ? 'text-white' : 'text-[#00492C]'
 
@@ -22,9 +24,12 @@ const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
     }
   }
 
-  const toggleServiceDropdown = (e: React.MouseEvent) => {
-    e.preventDefault()
-    setIsServiceDropdownOpen(!isServiceDropdownOpen)
+  const handleServicesClick = (e: React.MouseEvent) => {
+    // Only prevent default if clicking the dropdown arrow
+    if ((e.target as HTMLElement).tagName === 'svg' || (e.target as HTMLElement).tagName === 'path') {
+      e.preventDefault()
+      setIsServiceDropdownOpen(!isServiceDropdownOpen)
+    }
   }
 
   return (
@@ -63,7 +68,7 @@ const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
             <div className="relative group">
               <Link href="/services" className={`font-lato font-light text-base md:text-[20px] leading-normal md:leading-[24px] ${textColor} hover:font-bold active:font-bold whitespace-nowrap flex items-center mx-2 md:mx-4`}>
                 Services
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} onClick={(e) => e.preventDefault()}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
@@ -117,21 +122,25 @@ const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
               </Link>
               {/* Services with dropdown - Mobile */}
               <div>
-                <button 
-                  onClick={toggleServiceDropdown}
-                  className="w-full flex items-center justify-between py-2 px-4 text-[#00492C] hover:bg-gray-100"
-                >
-                  <span>Services</span>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    className={`h-4 w-4 transition-transform duration-300 ${isServiceDropdownOpen ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
+                <div className="flex items-center justify-between">
+                  <Link href="/services" className="flex-1 py-2 px-4 text-[#00492C] hover:bg-gray-100">
+                    Services
+                  </Link>
+                  <button 
+                    onClick={handleServicesClick}
+                    className="p-4 text-[#00492C] hover:bg-gray-100"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className={`h-4 w-4 transition-transform duration-300 ${isServiceDropdownOpen ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </div>
                 {isServiceDropdownOpen && (
                   <div className="bg-gray-50">
                     <Link href="/serviceproperty" className="block py-2 px-8 text-sm text-[#00492C] hover:bg-gray-100">
