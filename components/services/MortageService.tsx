@@ -19,7 +19,7 @@ const MortageService = () => {
                       src="/serviceimage/Group.png"
                       alt="Mortgage Icon"
                       fill
-                      sizes="(max-width: 768px) 40px, 50px"
+                      sizes="(max-width: 768px) 50px, 60px"
                       priority
                       className="object-contain"
                     />
