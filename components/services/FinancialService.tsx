@@ -30,11 +30,14 @@ const FinancialService = () => {
                   We offer personalized financial planning for individuals and customized strategies for businesses. Our solutions are designed to meet your specific goals and challenges. Whether personal or corporate, we ensure your financial success with tailored approaches.
                 </p>
                 <div className="flex justify-center md:justify-start mt-8 md:mt-5">
-                  <Link href="/financialplanning">
-                    <AnimatedButton 
-                      text="Read More"
-                    />
-                  </Link>
+                  <div className="cursor-pointer">
+                    <Link href="/financialplanning">
+                      <AnimatedButton 
+                        text="Read More"
+                        variant="dark-green"
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

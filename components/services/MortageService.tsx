@@ -32,9 +32,11 @@ const MortageService = () => {
                   We help you secure the most competitive mortgage rates and favorable terms for your needs. Our experts simplify the complexities of property financing, ensuring a smooth and stress-free process. Trust us to guide you every step of the way.
                 </p>
                 <div className="flex justify-center md:justify-start mt-8 md:mt-5">
-                  <Link href="/mortgage">
+                  <Link href="/mortgage" className="cursor-pointer">
                     <AnimatedButton 
                       text="Read More"
+                      variant="dark-green"
+                      
                     />
                   </Link>
                 </div>
