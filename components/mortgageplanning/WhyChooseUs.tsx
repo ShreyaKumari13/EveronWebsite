@@ -5,7 +5,7 @@ const WhyChooseUs = () => {
         <section className="px-3 sm:px-4 md:px-6 py-6 sm:py-8 md:py-12 mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
                 {/* Image Side */}
-                <div className="relative flex justify-center items-start pt-4 sm:pt-6 md:pt-0">
+                <div className="relative flex justify-center items-start pt-4 sm:pt-6 md:pt-0 order-2 md:order-1">
                     <div className="relative w-full 
                                 h-[280px] sm:h-[340px] md:h-[420px] lg:h-[500px] 
                                 rounded-[10px] sm:rounded-[15px] 
@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
                 </div>
 
                 {/* Content Side */}
-                <div className="relative flex flex-col pl-2 sm:pl-4 md:pl-6 lg:pl-10">
+                <div className="relative flex flex-col pl-2 sm:pl-4 md:pl-6 lg:pl-10 order-1 md:order-2">
                     <div className="flex flex-col">
                         <div>
                             <p className="text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] 
