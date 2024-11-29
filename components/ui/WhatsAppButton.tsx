@@ -5,7 +5,7 @@ import WhatsApp from '../icons/WhatsApp';
 const WhatsAppButton = () => {
   return (
     <Link
-      href="https://wa.me/85261524653" // Replace with your WhatsApp number
+      href="https://wa.me/85265016890" // Replace with your WhatsApp number
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA56] transition-all duration-300 rounded-full p-3 shadow-lg hover:scale-110"
