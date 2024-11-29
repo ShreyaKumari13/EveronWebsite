@@ -11,8 +11,21 @@ interface HeaderProps {
 
 const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false)
 
   const textColor = variant === 'transparent' ? 'text-white' : 'text-[#00492C]'
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+    if (isMobileMenuOpen) {
+      setIsServiceDropdownOpen(false)
+    }
+  }
+
+  const toggleServiceDropdown = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setIsServiceDropdownOpen(!isServiceDropdownOpen)
+  }
 
   return (
     <header className={`w-full fixed top-0 left-0 right-0 z-50 ${className}`}>
@@ -54,7 +67,7 @@ const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
-              {/* Dropdown menu for Services */}
+              {/* Dropdown menu for Services - Desktop */}
               <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
                 <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                   <Link href="/serviceproperty" className="block px-4 py-2 text-sm text-[#00492C] hover:bg-gray-100" role="menuitem">Property Consultancy</Link>
@@ -83,7 +96,7 @@ const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
           {/* Mobile Menu Button */}
           <button 
             className={`lg:hidden ${textColor} ml-4`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,10 +109,46 @@ const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-md">
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-              <Link href="/" className="block py-2 px-4 text-[#00492C] hover:bg-gray-100">Home</Link>
-              <Link href="/aboutus" className="block py-2 px-4 text-[#00492C] hover:bg-gray-100">About Us</Link>
-              <Link href="/services" className="block py-2 px-4 text-[#00492C] hover:bg-gray-100">Services</Link>
-              <Link href="/contactus" className="block py-2 px-4 text-[#00492C] hover:bg-gray-100">Contact Us</Link>
+              <Link href="/" className="block py-2 px-4 text-[#00492C] hover:bg-gray-100">
+                Home
+              </Link>
+              <Link href="/aboutus" className="block py-2 px-4 text-[#00492C] hover:bg-gray-100">
+                About Us
+              </Link>
+              {/* Services with dropdown - Mobile */}
+              <div>
+                <button 
+                  onClick={toggleServiceDropdown}
+                  className="w-full flex items-center justify-between py-2 px-4 text-[#00492C] hover:bg-gray-100"
+                >
+                  <span>Services</span>
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    className={`h-4 w-4 transition-transform duration-300 ${isServiceDropdownOpen ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isServiceDropdownOpen && (
+                  <div className="bg-gray-50">
+                    <Link href="/serviceproperty" className="block py-2 px-8 text-sm text-[#00492C] hover:bg-gray-100">
+                      Property Consultancy
+                    </Link>
+                    <Link href="/mortgage" className="block py-2 px-8 text-sm text-[#00492C] hover:bg-gray-100">
+                      Mortgage Planning
+                    </Link>
+                    <Link href="/financialplanning" className="block py-2 px-8 text-sm text-[#00492C] hover:bg-gray-100">
+                      Financial Planning
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <Link href="/contactus" className="block py-2 px-4 text-[#00492C] hover:bg-gray-100">
+                Contact Us
+              </Link>
             </div>
           </div>
         )}
