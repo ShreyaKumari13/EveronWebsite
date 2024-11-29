@@ -31,7 +31,7 @@ const PropertyService = () => {
                   We analyze market trends and craft strategies to maximize your returns while minimizing risks.
                 </p>
               </div>
-              <div className="ml-[-20px]  mt-8 md:mt-0 pl-4 md:pl-5">
+              <div className="flex justify-center md:justify-start ml-0 md:ml-[-20px] mt-8 md:mt-0 pl-0 md:pl-5">
                 <Link href="/serviceproperty">
                   <AnimatedButton
                     variant="dark-green"
