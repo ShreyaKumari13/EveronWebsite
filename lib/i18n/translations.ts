@@ -25,7 +25,8 @@ export const translations = {
     followFacebook: 'Follow us on Facebook',
     followLinkedin: 'Follow us on LinkedIn',
     visitErpLink: 'Visit our Property ERP link',
-    copyright: ' Everon Property & Mortgage Consultancy Limited. All rights reserved.',
+    copyright: '© Everon Property & Mortgage Consultancy Limited. All rights reserved.',
+
     
     // Contact Section translations
     contactUs: 'Contact Us',
@@ -254,7 +255,7 @@ export const translations = {
     copyright: ' Everon房地产与按揭咨询有限公司。版权所有。',
     
     // Contact Section translations
-    contactUs: '联系我们',
+    // contactUs: '联系我们',
     contactUs: '联系我们',
     phoneNumber1: '6501 6890',
     phoneNumber2: '2712 8382',

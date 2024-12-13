@@ -29,7 +29,7 @@ const Footer = () => {
               />
             </Link>
             <address className="not-italic text-sm md:text-[16px] font-lato leading-normal md:leading-[24px] md:-mt-5">
-              {t.address}
+              {t.footerAddress}
             </address>
           </div>
 
@@ -127,3 +127,4 @@ const Footer = () => {
 }
 
 export default Footer
+
