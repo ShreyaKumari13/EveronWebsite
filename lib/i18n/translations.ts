@@ -1,10 +1,10 @@
 export const translations = {
   en: {
     // Navigation
-    home: 'Home',
-    services: 'Services',
-    about: 'About',
-    contact: 'Contact',
+    // home: 'Home',
+    // services: 'Services',
+    // about: 'About',
+    // contact: 'Contact',
     
     // Header Navigation
     home: "Home",
@@ -23,11 +23,11 @@ export const translations = {
     everonHome: 'Everon Home',
     everonLogo: 'Everon Logo',
     address: 'Room 1314A, 13/F, Lippo Sun\nPlaza, 28 Canton Road, Tsim\nSha Tsui, Kowloon',
-    home: 'Home',
-    about: 'About',
+    // home: 'Home',
+    // about: 'About',
     signUp: 'Sign Up',
-    services: 'Services',
-    contact: 'Contact',
+    // services: 'Services',
+    // contact: 'Contact',
     privacyPolicy: 'Privacy Policy',
     connectWithUs: 'Connect With Us',
     followTwitter: 'Follow us on Twitter',
@@ -55,7 +55,7 @@ export const translations = {
     // Hero Section translations
     luxuryHomeBackground: 'Luxury home background',
     buyYourNext: 'Buy Your Next',
-    home: 'Home',
+    // home: 'Home',
     amazingLuxuryHome1: 'Amazing luxury home waiting',
     amazingLuxuryHome2: 'for your presence!',
     
@@ -245,10 +245,10 @@ export const translations = {
     contact: '联系我们',
     
     // Header Navigation
-    home: "主页",
-    about: "关于我们",
-    services: "服务",
-    contact: "联系我们",
+    // home: "主页",
+    // about: "关于我们",
+    // services: "服务",
+    // contact: "联系我们",
     propertyConsultancy: "房地产咨询",
     mortgagePlanning: "按揭规划",
     financialPlanning: "理财规划",
@@ -261,11 +261,11 @@ export const translations = {
     everonHome: 'Everon 主页',
     everonLogo: 'Everon 标志',
     address: '九龙尖沙咀\n广东道28号\n力宝太阳广场13楼1314A室',
-    home: '主页',
-    about: '关于我们',
+    // home: '主页',
+    // about: '关于我们',
     signUp: '注册',
-    services: '服务',
-    contact: '联系我们',
+    // services: '服务',
+    // contact: '联系我们',
     privacyPolicy: '隐私政策',
     connectWithUs: '关注我们',
     followTwitter: '在Twitter上关注我们',
@@ -293,7 +293,7 @@ export const translations = {
     // Hero Section translations
     luxuryHomeBackground: '豪华住宅背景',
     buyYourNext: '购买您的下一个',
-    home: '家',
+    // home: '家',
     amazingLuxuryHome1: '令人惊叹的豪华住宅',
     amazingLuxuryHome2: '等待您的入住！',
     
