@@ -1,12 +1,6 @@
 export const translations = {
   en: {
-    // Navigation
-    // home: 'Home',
-    // services: 'Services',
-    // about: 'About',
-    // contact: 'Contact',
-    
-    // Header Navigation
+    // Navigation and Header
     home: "Home",
     about: "About Us",
     services: "Services",
@@ -22,12 +16,8 @@ export const translations = {
     // Footer translations
     everonHome: 'Everon Home',
     everonLogo: 'Everon Logo',
-    address: 'Room 1314A, 13/F, Lippo Sun\nPlaza, 28 Canton Road, Tsim\nSha Tsui, Kowloon',
-    // home: 'Home',
-    // about: 'About',
+    footerAddress: 'Room 1314A, 13/F, Lippo Sun\nPlaza, 28 Canton Road, Tsim\nSha Tsui, Kowloon',
     signUp: 'Sign Up',
-    // services: 'Services',
-    // contact: 'Contact',
     privacyPolicy: 'Privacy Policy',
     connectWithUs: 'Connect With Us',
     followTwitter: 'Follow us on Twitter',
@@ -55,7 +45,6 @@ export const translations = {
     // Hero Section translations
     luxuryHomeBackground: 'Luxury home background',
     buyYourNext: 'Buy Your Next',
-    // home: 'Home',
     amazingLuxuryHome1: 'Amazing luxury home waiting',
     amazingLuxuryHome2: 'for your presence!',
     
@@ -181,7 +170,6 @@ export const translations = {
     mortgageServiceAlt: "Mortgage Service",
     mortgageServiceImageAlt: "Mortgage Planning Services",
     mortgagePlanningIntro: "Navigating the complexities of property financing can be daunting, but with <span class='font-[600]'>Everon Property & Mortgage Consultancy Limited</span>, you're in expert hands.",
-    mortgagePlanningDesc: "We specialize in helping you <span class='font-[600]'>secure the best mortgage rates</span> and terms to make your property dreams a reality.",
     mortgageServicesIncludeTitle: "Our Mortgage Planning Services Include:",
     mortgageServicesIncludeDesc: "Purchasing a home or refinancing your mortgage is a significant financial decision that requires careful planning and expertise. At the heart of our service is a commitment to guiding you through every step of the process, ensuring your mortgage aligns seamlessly with your financial goals. Here's what we offer:",
     mortgageMoneyImageAlt: "Mortgage Money Services",
@@ -238,17 +226,11 @@ export const translations = {
     financialHeroTitle: "Financial Planning",
   },
   zh: {
-    // Navigation
-    home: '首页',
-    services: '服务',
-    about: '关于我们',
-    contact: '联系我们',
-    
-    // Header Navigation
-    // home: "主页",
-    // about: "关于我们",
-    // services: "服务",
-    // contact: "联系我们",
+    // Navigation and Header
+    home: "主页",
+    about: "关于我们",
+    services: "服务",
+    contact: "联系我们",
     propertyConsultancy: "房地产咨询",
     mortgagePlanning: "按揭规划",
     financialPlanning: "理财规划",
@@ -260,12 +242,8 @@ export const translations = {
     // Footer translations
     everonHome: 'Everon 主页',
     everonLogo: 'Everon 标志',
-    address: '九龙尖沙咀\n广东道28号\n力宝太阳广场13楼1314A室',
-    // home: '主页',
-    // about: '关于我们',
+    footerAddress: '九龙尖沙咀\n广东道28号\n力宝太阳广场13楼1314A室',
     signUp: '注册',
-    // services: '服务',
-    // contact: '联系我们',
     privacyPolicy: '隐私政策',
     connectWithUs: '关注我们',
     followTwitter: '在Twitter上关注我们',
@@ -276,6 +254,7 @@ export const translations = {
     copyright: ' Everon房地产与按揭咨询有限公司。版权所有。',
     
     // Contact Section translations
+    contactUs: '联系我们',
     contactUs: '联系我们',
     phoneNumber1: '6501 6890',
     phoneNumber2: '2712 8382',
@@ -293,7 +272,6 @@ export const translations = {
     // Hero Section translations
     luxuryHomeBackground: '豪华住宅背景',
     buyYourNext: '购买您的下一个',
-    // home: '家',
     amazingLuxuryHome1: '令人惊叹的豪华住宅',
     amazingLuxuryHome2: '等待您的入住！',
     
@@ -419,7 +397,6 @@ export const translations = {
     mortgageServiceAlt: "按揭服务",
     mortgageServiceImageAlt: "按揭规划服务",
     mortgagePlanningIntro: "房产融资的复杂性可能令人望而生畏，但有了<span class='font-[600]'>Everon房产和按揭咨询有限公司</span>，您就有了专业指导。",
-    mortgagePlanningDesc: "我们专注于帮助您<span class='font-[600]'>获取最优惠的按揭利率</span>和条款，让您的置业梦想成为现实。",
     mortgageServicesIncludeTitle: "我们的按揭规划服务包括：",
     mortgageServicesIncludeDesc: "购买房屋或重新融资是一个需要仔细规划和专业知识的重要财务决定。我们服务的核心是承诺指导您完成整个过程的每一步，确保您的按揭与您的财务目标完美契合。以下是我们提供的服务：",
     mortgageMoneyImageAlt: "按揭理财服务",
@@ -476,3 +453,4 @@ export const translations = {
     financialHeroTitle: "理财规划",
   }
 }
+
