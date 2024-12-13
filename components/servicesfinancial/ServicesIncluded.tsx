@@ -1,5 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const services = [
     {
@@ -25,6 +29,17 @@ const services = [
 ]
 
 export default function ServicesIncluded() {
+    const { language } = useLanguage();
+    const t = translations[language];
+
+    const localizedServices = services.map((service) => {
+        return {
+            imageSrc: service.imageSrc,
+            title: t[`financialServiceTitle${services.indexOf(service) + 1}`],
+            description: t[`financialServiceDesc${services.indexOf(service) + 1}`],
+        }
+    })
+
     return (
         <section className="px-3 sm:px-4 md:px-6 
                         py-8 sm:py-10 md:py-12 
@@ -36,16 +51,14 @@ export default function ServicesIncluded() {
                            leading-tight md:leading-[1.2] 
                            text-left 
                            mb-3 sm:mb-4">
-                    Financial Solutions
+                    {t.financialSolutionsTitle}
                 </h2>
                 <p className="font-lato 
                           text-base sm:text-lg md:text-xl lg:text-[24px] 
                           font-[400] 
                           leading-relaxed 
-                          text-left">
-                    At <span className="font-[600]">Everon Property & Mortgage Consultancy Limited</span>, 
-                    we understand that every financial journey is unique. That's why we offer a range of 
-                    <span className="font-[600]"> tailored financial solutions</span> to suit both individuals and businesses.
+                          text-left"
+                    dangerouslySetInnerHTML={{ __html: t.financialSolutionsDesc }}>
                 </p>
             </div>
 
@@ -59,7 +72,7 @@ export default function ServicesIncluded() {
                                font-[700] 
                                leading-tight md:leading-[1.2] 
                                text-left">
-                        Our Financial Planning <br className="hidden sm:block" /> Services Include:
+                        {t.financialServicesIncludeTitle}
                     </h2>
                 </div>
 
@@ -71,16 +84,14 @@ export default function ServicesIncluded() {
                               leading-relaxed 
                               text-left 
                               text-[#1C1C1C]">
-                        Financial planning and management are essential to achieving your personal and business goals. 
-                        We offer a wide range of tailored financial solutions designed to address the diverse needs 
-                        of individuals and organizations. Here's how our expertise can help secure your financial future:
+                        {t.financialServicesIncludeDesc}
                     </p>
                 </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
                         gap-4 sm:gap-5 md:gap-6">
-                {services.map((service, index) => (
+                {localizedServices.map((service, index) => (
                     <Card
                         key={index}
                         className={`relative border-0 
@@ -108,7 +119,7 @@ export default function ServicesIncluded() {
                                         width={32}
                                         height={32}
                                         className={`object-contain w-6 sm:w-7 md:w-8 transition-all duration-300 ${
-                                            service.title === "Corporate Financial Strategies" 
+                                            service.title === t.financialServiceTitle2
                                             ? "brightness-0 sepia-[.50] saturate-[2] hue-rotate-[335deg] brightness-[1.2] group-hover:brightness-100 group-hover:sepia-0 group-hover:saturate-100 group-hover:hue-rotate-0"
                                             : ""
                                         }`}

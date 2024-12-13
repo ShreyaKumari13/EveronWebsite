@@ -1,6 +1,19 @@
+'use client'
+
 import Image from 'next/image';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const WhyChooseUs = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
+    const whyChoosePoints = [
+        t.mortgageWhyChoosePoint1,
+        t.mortgageWhyChoosePoint2,
+        t.mortgageWhyChoosePoint3,
+    ];
+
     return (
         <section className="px-3 sm:px-4 md:px-6 py-6 sm:py-8 md:py-12 mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
@@ -14,7 +27,7 @@ const WhyChooseUs = () => {
                                 transition-all duration-300">
                         <Image
                             src="/mortgageimage/2.3_mortgage-planning Why to choose us.jpg"
-                            alt="Why Choose Everon for Mortgage Planning"
+                            alt={t.mortgageWhyChooseImageAlt}
                             fill
                             className="object-cover rounded-[10px] sm:rounded-[15px] 
                                      transition-transform duration-700 hover:scale-105"
@@ -32,7 +45,7 @@ const WhyChooseUs = () => {
                                       font-lato font-bold text-[#1C1C1C] 
                                       leading-tight md:leading-[1.2] 
                                       mb-4 sm:mb-6">
-                                Why Choose Us
+                                {t.mortgageWhyChooseTitle}
                             </p>
                             <ul className="pt-2 sm:pt-3 md:pt-4 
                                        text-base sm:text-lg md:text-xl lg:text-[24px] 
@@ -40,33 +53,17 @@ const WhyChooseUs = () => {
                                        leading-relaxed md:leading-[1.4] 
                                        list-none 
                                        space-y-4 sm:space-y-5 md:space-y-6">
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 text-[#00492C] 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="group-hover:translate-x-1 
-                                                 transition-transform duration-300">
-                                        Strong relationships with leading financial institutions.
-                                    </span>
-                                </li>
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 text-[#00492C] 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="group-hover:translate-x-1 
-                                                 transition-transform duration-300">
-                                        Transparent and unbiased recommendations.
-                                    </span>
-                                </li>
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 text-[#00492C] 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="group-hover:translate-x-1 
-                                                 transition-transform duration-300">
-                                        Streamlined processes to save you time and effort.
-                                    </span>
-                                </li>
+                                {whyChoosePoints.map((point, index) => (
+                                    <li key={index} className="flex items-start group">
+                                        <span className="mr-2 mt-1.5 text-[#00492C] 
+                                                     transition-transform duration-300 
+                                                     group-hover:scale-125">•</span>
+                                        <span className="group-hover:translate-x-1 
+                                                     transition-transform duration-300">
+                                            {point}
+                                        </span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -80,7 +77,7 @@ const WhyChooseUs = () => {
                           text-left 
                           max-w-[900px]
                           transition-all duration-300">
-                    Empower your property decisions with smart mortgage planning.
+                    {t.mortgageWhyChooseClosing}
                 </p>
             </div>
         </section>

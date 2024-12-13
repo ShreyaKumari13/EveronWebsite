@@ -1,30 +1,37 @@
+'use client'
+
 import Image from 'next/image'
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const services = [
     {
         imageSrc: "/serviceproperty/analysis.png",
-        title: "Analysis",
-        description: "In-depth market analysis to identify lucrative opportunities.",
+        titleKey: "propertyAnalysisTitle",
+        descriptionKey: "propertyAnalysisDesc",
     },
     {
         imageSrc: "/serviceproperty/valuation.png",
-        title: "Valuation",
-        description: "Assistance in evaluating property values and negotiating deals.",
+        titleKey: "propertyValuationTitle",
+        descriptionKey: "propertyValuationDesc",
     },
     {
         imageSrc: "/serviceproperty/strategy.png",
-        title: "Strategy",
-        description: "Expert guidance on investment strategies for long-term gains.",
+        titleKey: "propertyStrategyTitle",
+        descriptionKey: "propertyStrategyDesc",
     },
     {
         imageSrc: "/serviceproperty/compliance.png",
-        title: "Compliance",
-        description: "Legal and regulatory advice to simplify property transactions.",
+        titleKey: "propertyComplianceTitle",
+        descriptionKey: "propertyComplianceDesc",
     },
 ]
 
 export default function WhatWeOffer() {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <section className="px-3 sm:px-4 py-8 sm:py-10 md:py-12 mx-auto max-w-7xl">
             <div className="mb-8 sm:mb-10 md:mb-12">
@@ -33,29 +40,25 @@ export default function WhatWeOffer() {
                              text-left text-underline-position-from-font 
                              decoration-skip-ink-none 
                              mb-3 sm:mb-4">
-                    Property Consultancy Services
+                    {t.propertyServicesTitle}
                 </h2>
                 <p className="font-lato text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] 
                              font-[400] leading-[1.2] 
                              text-left text-underline-position-from-font 
                              decoration-skip-ink-none 
                              mb-3 sm:mb-4">
-                    At Everon Property & Mortgage Consultancy Limited, we specialize in
-                    providing comprehensive property consultancy services tailored to meet
-                    your goals, whether you're <strong>buying</strong>, <strong>selling</strong>, or <strong>investing</strong>.
+                    {t.propertyServicesIntro}
                 </p>
                 <p className="font-lato text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] 
                              font-[400] leading-[1.2] 
                              text-left text-underline-position-from-font 
                              decoration-skip-ink-none">
-                    Our team of experienced consultants ensures you receive 
-                    <span className="font-[600]"> strategic advice </span> 
-                    to maximize your property investments while minimizing risks.
+                    {t.propertyServicesTeam}
                 </p>
             </div>
 
             <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-8 sm:mb-10 md:mb-12">
-                What We Offer:
+                {t.whatWeOfferTitle}
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
@@ -75,7 +78,7 @@ export default function WhatWeOffer() {
                                         transition-transform duration-300 ease-in-out">
                                 <Image
                                     src={service.imageSrc}
-                                    alt={service.title}
+                                    alt={t[service.titleKey]}
                                     width={32}
                                     height={32}
                                     className="object-contain w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8"
@@ -90,7 +93,7 @@ export default function WhatWeOffer() {
                                         leading-[1.2] font-[600] 
                                         text-underline-position-from-font 
                                         decoration-skip-ink-none">
-                                {service.title}
+                                {t[service.titleKey]}
                             </div>
                         </CardHeader>
                         <CardContent className="pb-3 sm:pb-4">
@@ -100,7 +103,7 @@ export default function WhatWeOffer() {
                                       font-lato 
                                       text-underline-position-from-font 
                                       decoration-skip-ink-none">
-                                {service.description}
+                                {t[service.descriptionKey]}
                             </p>
                         </CardContent>
                     </Card>

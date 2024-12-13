@@ -1,19 +1,26 @@
+'use client'
+
 import Image from 'next/image'
 import FlashImage from '../ui/FlashImage'
+import { useLanguage } from '@/lib/i18n/LanguageContext'
+import { translations } from '@/lib/i18n/translations'
 
 const WhyChooseUsSection = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
   const features = [
     {
-      title: "Tailored Solutions",
-      description: "We understand that every client is unique, and so are their financial needs."
+      title: t.tailoredSolutionsTitle,
+      description: t.tailoredSolutionsDesc
     },
     {
-      title: "Experienced Team",
-      description: "Our team has over 10 years of expertise in property, mortgage, and financial consultancy."
+      title: t.experiencedTeamTitle,
+      description: t.experiencedTeamDesc
     },
     {
-      title: "Comprehensive Services",
-      description: "From property investments to mortgage planning, we've got you covered."
+      title: t.comprehensiveServicesTitle,
+      description: t.comprehensiveServicesDesc
     }
   ]
 
@@ -23,7 +30,7 @@ const WhyChooseUsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="relative md:pl-[90px]">
             <h2 className="text-2xl md:text-3xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] mb-6 md:mb-[28px]">
-              WHY CHOOSE US?
+              {t.whyChooseUs}
             </h2>
             <div className="w-full md:w-[416px]">
               <div className="space-y-6 md:space-y-8">
@@ -48,21 +55,21 @@ const WhyChooseUsSection = () => {
               <div className="relative w-full h-[200px] md:h-[241px] overflow-hidden rounded-[30px]">
                 <FlashImage
                   src="/images/Why choose us 1.jpg"
-                  alt="Why Choose Us Image 1"
+                  alt={t.whyChooseUsImage1}
                   priority
                 />
               </div>
               <div className="relative w-full h-[200px] md:h-[241px] overflow-hidden rounded-[30px]">
                 <FlashImage
                   src="/images/Why choose us 2.jpg"
-                  alt="Why Choose Us Image 2"
+                  alt={t.whyChooseUsImage2}
                 />
               </div>
             </div>
             <div className="relative h-[300px] sm:h-[498px] overflow-hidden rounded-[30px] mt-4 sm:mt-0">
               <FlashImage
                 src="/images/Why choose us 3.jpg"
-                alt="Why Choose Us Image 3"
+                alt={t.whyChooseUsImage3}
               />
             </div>
           </div>

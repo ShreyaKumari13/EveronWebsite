@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import AnimatedButton from '../ui/AnimatedButton'
 import FlashImage from '../ui/FlashImage'
+import { useLanguage } from '@/lib/i18n/LanguageContext'
+import { translations } from '@/lib/i18n/translations'
 
 const countryCodes = [
   { code: '+1', country: 'USA/Canada' },
@@ -19,6 +21,8 @@ const countryCodes = [
 
 const ContactForm = () => {
   const [selectedCountryCode, setSelectedCountryCode] = useState('+852')
+  const { language } = useLanguage()
+  const t = translations[language]
 
   return (
     <div className="w-full bg-white pt-[79px] pb-[30px]">
@@ -30,7 +34,7 @@ const ContactForm = () => {
               <div className="relative w-full h-full overflow-hidden rounded-[30px]">
                 <FlashImage
                   src="/contactimage/Contact Us.jpg"
-                  alt="Contact Us Building"
+                  alt={t.contactFormImage}
                   priority
                 />
               </div>
@@ -39,21 +43,21 @@ const ContactForm = () => {
             {/* Right Section - Contact Form */}
             <div className="w-full lg:w-1/2 flex items-start justify-center h-full py-8">
               <div className="w-full max-w-md bg-white rounded-lg p-6 shadow-sm">
-                <h1 className="text-[32px] font-lato font-[700] text-[#1C1C1C] leading-[40px] text-center mb-3">Let&apos;s Get In Touch</h1>
+                <h1 className="text-[32px] font-lato font-[700] text-[#1C1C1C] leading-[40px] text-center mb-3">{t.contactFormTitle}</h1>
                 <p className="text-[16px] font-lato text-[#1C1C1C] text-center mb-6">
-                  or just reach out manually to <span className="font-semibold">info@everonmortgage.com</span>
+                  {t.contactFormSubtitle} <span className="font-semibold">info@everonmortgage.com</span>
                 </p>
                 <form className="space-y-4">
                   {/* Name Field */}
                   <div>
                     <label htmlFor="name" className="block text-[16px] font-lato text-[#1C1C1C] mb-1">
-                      Name:
+                      {t.nameLabel}
                     </label>
                     <div className="relative">
                       <input
                         type="text"
                         id="name"
-                        placeholder="Enter your name"
+                        placeholder={t.namePlaceholder}
                         className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8E8154] focus:border-[#8E8154]"
                       />
                       <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
@@ -67,13 +71,13 @@ const ContactForm = () => {
                   {/* Email Field */}
                   <div>
                     <label htmlFor="email" className="block text-[16px] font-lato text-[#1C1C1C] mb-1">
-                      Email Address:
+                      {t.emailLabel}
                     </label>
                     <div className="relative">
                       <input
                         type="email"
                         id="email"
-                        placeholder="Enter your email address"
+                        placeholder={t.emailPlaceholder}
                         className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8E8154] focus:border-[#8E8154]"
                       />
                       <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
@@ -87,7 +91,7 @@ const ContactForm = () => {
                   {/* Phone Field */}
                   <div>
                     <label htmlFor="phone" className="block text-[16px] font-lato text-[#1C1C1C] mb-1">
-                      Phone Number:
+                      {t.phoneLabel}
                     </label>
                     <div className="flex gap-2">
                       <div className="relative w-32">
@@ -112,7 +116,7 @@ const ContactForm = () => {
                         <input
                           type="tel"
                           id="phone"
-                          placeholder="Enter your phone number"
+                          placeholder={t.phonePlaceholder}
                           className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8E8154] focus:border-[#8E8154]"
                         />
                         <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
@@ -127,13 +131,13 @@ const ContactForm = () => {
                   {/* Message Field */}
                   <div>
                     <label htmlFor="message" className="block text-[16px] font-lato text-[#1C1C1C] mb-1">
-                      Message:
+                      {t.messageLabel}
                     </label>
                     <div className="relative">
                       <textarea
                         id="message"
                         rows={3}
-                        placeholder="Write your message here..."
+                        placeholder={t.messagePlaceholder}
                         className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8E8154] focus:border-[#8E8154]"
                       ></textarea>
                       <span className="absolute top-2 left-0 pl-3 flex items-start text-gray-400">
@@ -147,7 +151,7 @@ const ContactForm = () => {
                   {/* Submit Button */}
                   <AnimatedButton
                     type="submit"
-                    text="Send Message"
+                    text={t.sendMessage}
                     variant="submit"
                     size="full"
                     showArrow={false}

@@ -1,15 +1,23 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Lato } from 'next/font/google'
+import { Inter } from 'next/font/google'
+import { Lato } from 'next/font/google'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ClientWrapper from '../components/ui/ClientWrapper'
 import WhatsAppButton from '../components/ui/WhatsAppButton'
+import { LanguageProvider } from '../lib/i18n/LanguageContext'
+import React from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 const lato = Lato({ 
   weight: ['400'],
   subsets: ['latin'],
+  display: 'swap',
   variable: '--font-lato',
 })
 
@@ -32,14 +40,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${lato.variable} md:cursor-none`}>
-        <ClientWrapper />
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </div>
-        <WhatsAppButton />
+      <body className={`${inter.className} ${lato.variable}`}>
+        <LanguageProvider>
+          <ClientWrapper>
+            <Header />
+            {children}
+            <Footer />
+            <WhatsAppButton />
+          </ClientWrapper>
+        </LanguageProvider>
       </body>
     </html>
   )

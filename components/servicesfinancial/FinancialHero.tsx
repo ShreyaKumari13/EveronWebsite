@@ -2,8 +2,13 @@
 
 import Image from 'next/image'
 import Header from '../Header'
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const FinancialHero = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="relative w-full 
                       min-h-[50vh] sm:min-h-[60vh] md:min-h-[75vh] lg:min-h-[85vh] 
@@ -12,7 +17,7 @@ const FinancialHero = () => {
       <div className="absolute inset-0">
         <Image 
           src="/financial/3.1_Banner.jpg"
-          alt="Financial Planning background"
+          alt={t.financialHeroImageAlt}
           fill
           className="object-cover object-center"
           priority
@@ -53,7 +58,7 @@ const FinancialHero = () => {
                           tracking-wide 
                           drop-shadow-lg
                           transition-all duration-300">
-                Financial Planning
+                {t.financialHeroTitle}
               </h1>
             </div>
           </div>

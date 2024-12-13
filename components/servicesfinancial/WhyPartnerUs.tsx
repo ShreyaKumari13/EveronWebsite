@@ -1,6 +1,19 @@
+'use client'
+
 import Image from 'next/image';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const WhyPartnerUs = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
+    const partnerPoints = [
+        t.financialPartnerPoint1,
+        t.financialPartnerPoint2,
+        t.financialPartnerPoint3,
+    ];
+
     return (
         <section className="px-3 sm:px-4 md:px-6 
                         py-6 sm:py-8 md:py-12 
@@ -19,7 +32,7 @@ const WhyPartnerUs = () => {
                                 transition-all duration-300">
                         <Image
                             src="/financial/3.3_Why partner with us.jpg"
-                            alt="Why Partner with Everon for Financial Planning"
+                            alt={t.financialPartnerImageAlt}
                             fill
                             className="object-cover 
                                    rounded-[10px] sm:rounded-[15px]
@@ -42,7 +55,7 @@ const WhyPartnerUs = () => {
                                       leading-tight md:leading-[1.2] 
                                       text-left 
                                       mb-4 sm:mb-6">
-                                Why Partner With Us?
+                                {t.financialPartnerTitle}
                             </p>
                             <ul className="pt-2 sm:pt-3 md:pt-4 
                                        text-base sm:text-lg md:text-xl lg:text-[24px] 
@@ -51,36 +64,18 @@ const WhyPartnerUs = () => {
                                        leading-relaxed md:leading-[1.4] 
                                        text-left list-none 
                                        space-y-4 sm:space-y-5 md:space-y-6">
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 
-                                                 text-[#00492C] 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="group-hover:translate-x-1 
-                                                 transition-transform duration-300">
-                                        Customized solutions aligned with your goals.
-                                    </span>
-                                </li>
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 
-                                                 text-[#00492C] 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="group-hover:translate-x-1 
-                                                 transition-transform duration-300">
-                                        A team of seasoned financial experts with extensive industry knowledge.
-                                    </span>
-                                </li>
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 
-                                                 text-[#00492C] 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="group-hover:translate-x-1 
-                                                 transition-transform duration-300">
-                                        A client-first approach that prioritizes your success.
-                                    </span>
-                                </li>
+                                {partnerPoints.map((point, index) => (
+                                    <li key={index} className="flex items-start group">
+                                        <span className="mr-2 mt-1.5 
+                                                     text-[#00492C] 
+                                                     transition-transform duration-300 
+                                                     group-hover:scale-125">•</span>
+                                        <span className="group-hover:translate-x-1 
+                                                     transition-transform duration-300">
+                                            {point}
+                                        </span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -95,7 +90,7 @@ const WhyPartnerUs = () => {
                           text-left 
                           max-w-[900px]
                           transition-all duration-300">
-                    Achieve financial clarity and confidence with our expert guidance.
+                    {t.financialPartnerClosing}
                 </p>
             </div>
         </section>

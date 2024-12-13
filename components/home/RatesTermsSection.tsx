@@ -1,7 +1,14 @@
-import Image from 'next/image';
-import React from 'react';
+'use client'
+
+import Image from 'next/image'
+import React from 'react'
+import { useLanguage } from '@/lib/i18n/LanguageContext'
+import { translations } from '@/lib/i18n/translations'
 
 const RatesTermsSection = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
   return (
     <section className="w-full bg-[#B392550D] py-8 md:py-12">
       <div className="container mx-auto max-w-[1280px] px-4 md:px-6 lg:px-[100px]">
@@ -11,7 +18,7 @@ const RatesTermsSection = () => {
             <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-white rounded-full">
               <Image
                 src="/images/pie-chart.png"
-                alt="Rates Icon"
+                alt={t.ratesIcon}
                 width={60}
                 height={60}
                 className="object-contain"
@@ -19,10 +26,10 @@ const RatesTermsSection = () => {
             </div>
             <div>
               <p className="text-sm md:text-[16px] font-lato font-normal text-[#1C1C1C] uppercase">
-                RATES  US  LOW  AS
+                {t.ratesAsLowAs}
               </p>
               <p className="mt-1 whitespace-nowrap">
-                <span className="font-lato text-base md:text-[20px] font-normal leading-tight md:leading-[28.8px] text-[#1C1C1C] text-left">From </span>
+                <span className="font-lato text-base md:text-[20px] font-normal leading-tight md:leading-[28.8px] text-[#1C1C1C] text-left">{t.from} </span>
                 <span className="font-lato text-3xl md:text-[50px] font-normal leading-tight md:leading-[60px] text-[#1C1C1C] text-left">3.74%</span>
               </p>
             </div>
@@ -33,7 +40,7 @@ const RatesTermsSection = () => {
             <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-white rounded-full">
               <Image
                 src="/images/Group 132.png"
-                alt="Process Icon"
+                alt={t.processIcon}
                 width={60}
                 height={60}
                 className="object-contain"
@@ -41,11 +48,11 @@ const RatesTermsSection = () => {
             </div>
             <div>
               <p className="text-sm md:text-[16px] font-lato font-normal text-[#1C1C1C] uppercase">
-                FAST  &  EASY  PROCESS
+                {t.fastEasyProcess}
               </p>
               <p className="mt-1 whitespace-nowrap">
-                <span className="font-lato text-base md:text-[20px] font-normal leading-tight md:leading-[28.8px] text-[#1C1C1C] text-left">Only </span>
-                <span className="font-lato text-3xl md:text-[50px] font-normal leading-tight md:leading-[60px] text-[#1C1C1C] text-left">7 Days</span>
+                <span className="font-lato text-base md:text-[20px] font-normal leading-tight md:leading-[28.8px] text-[#1C1C1C] text-left">{t.only} </span>
+                <span className="font-lato text-3xl md:text-[50px] font-normal leading-tight md:leading-[60px] text-[#1C1C1C] text-left">{t.sevenDays}</span>
               </p>
             </div>
           </div>
@@ -55,7 +62,7 @@ const RatesTermsSection = () => {
             <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-white rounded-full">
               <Image
                 src="/images/Group 131.png"
-                alt="Loan Term Icon"
+                alt={t.loanTermIcon}
                 width={60}
                 height={60}
                 className="object-contain"
@@ -63,20 +70,18 @@ const RatesTermsSection = () => {
             </div>
             <div>
               <p className="text-sm md:text-[16px] font-lato font-normal text-[#1C1C1C] uppercase">
-                LONG LOAN TERM
+                {t.longLoanTerm}
               </p>
               <p className="mt-1 whitespace-nowrap">
-                <span className="font-lato text-base md:text-[20px] font-normal leading-tight md:leading-[28.8px] text-[#1C1C1C] text-left">Up  to </span>
-                <span className="font-lato text-3xl md:text-[50px] font-normal leading-tight md:leading-[60px] text-[#1C1C1C] text-left">30 Years</span>
+                <span className="font-lato text-base md:text-[20px] font-normal leading-tight md:leading-[28.8px] text-[#1C1C1C] text-left">{t.upTo} </span>
+                <span className="font-lato text-3xl md:text-[50px] font-normal leading-tight md:leading-[60px] text-[#1C1C1C] text-left">{t.thirtyYears}</span>
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default RatesTermsSection;
-
-
+export default RatesTermsSection

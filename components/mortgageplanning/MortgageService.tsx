@@ -1,8 +1,15 @@
+'use client'
+
 import Image from 'next/image';
 import React from 'react';
 import FlashImage from '../ui/FlashImage';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const MortgageService = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <section className="px-3 sm:px-4 py-6 sm:py-8 md:py-12 mx-auto max-w-7xl">
             <div className="mb-8 sm:mb-10 md:mb-12">
@@ -11,25 +18,21 @@ const MortgageService = () => {
                              text-left text-underline-position-from-font 
                              decoration-skip-ink-none 
                              mb-3 sm:mb-4">
-                    Mortgage Planning
+                    {t.mortgagePlanningTitle}
                 </h2>
                 <p className="font-lato text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] 
                              font-[400] leading-[1.2] 
                              text-left text-underline-position-from-font 
                              decoration-skip-ink-none 
-                             mb-3 sm:mb-4">
-                    Navigating the complexities of property financing can be daunting, but with 
-                    <span className="font-[600]"> Everon Property & Mortgage Consultancy Limited</span>, 
-                    you're in expert hands.
-                </p>
+                             mb-3 sm:mb-4"
+                    dangerouslySetInnerHTML={{ __html: t.mortgagePlanningIntro }}
+                />
                 <p className="font-lato text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] 
                              font-[400] leading-[1.2] 
                              text-left text-underline-position-from-font 
-                             decoration-skip-ink-none">
-                    We specialize in helping you 
-                    <span className="font-[600]"> secure the best mortgage rates</span> 
-                    and terms to make your property dreams a reality.
-                </p>
+                             decoration-skip-ink-none"
+                    dangerouslySetInnerHTML={{ __html: t.mortgagePlanningDesc }}
+                />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
@@ -53,7 +56,7 @@ const MortgageService = () => {
                                     transition-all duration-300">
                             <FlashImage
                                 src="/mortgageimage/2.1_mortgage-planning included.jpg"
-                                alt="Mortgage Planning Services"
+                                alt={t.mortgageServiceImageAlt}
                                 priority
                             />
                         </div>
@@ -69,7 +72,7 @@ const MortgageService = () => {
                                       leading-tight md:leading-[1.2] 
                                       text-left 
                                       mb-4 sm:mb-5 md:mb-6">
-                                Our Mortgage Planning Services Include:
+                                {t.mortgageServicesIncludeTitle}
                             </p>
                             <p className="font-lato text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] 
                                       font-[400] leading-[1.3] 
@@ -77,7 +80,7 @@ const MortgageService = () => {
                                       decoration-skip-ink-none text-[#1C1C1C] 
                                       max-w-[511px]
                                       transition-all duration-300">
-                                Purchasing a home or refinancing your mortgage is a significant financial decision that requires careful planning and expertise. At the heart of our service is a commitment to guiding you through every step of the process, ensuring your mortgage aligns seamlessly with your financial goals. Here's what we offer:
+                                {t.mortgageServicesIncludeDesc}
                             </p>
                         </div>
                     </div>

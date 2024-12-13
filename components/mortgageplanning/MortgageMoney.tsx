@@ -1,8 +1,22 @@
+'use client'
+
 import Image from 'next/image';
 import React from 'react';
 import FlashImage from '../ui/FlashImage';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const MortgageMoney = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
+    const mortgageServices = [
+        t.mortgageServicePoint1,
+        t.mortgageServicePoint2,
+        t.mortgageServicePoint3,
+        t.mortgageServicePoint4,
+    ];
+
     return (
         <section className="px-3 sm:px-4 py-6 sm:py-8 md:py-12 mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
@@ -17,38 +31,16 @@ const MortgageMoney = () => {
                                        leading-normal md:leading-[1.2] 
                                        text-left list-none 
                                        space-y-4 sm:space-y-5 md:space-y-6">
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 text-[#00472f] font-bold 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="transition-all duration-300 group-hover:translate-x-1">
-                                        Personalized mortgage assessments based on your financial profile.
-                                    </span>
-                                </li>
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 text-[#00472f] font-bold 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="transition-all duration-300 group-hover:translate-x-1">
-                                        Identifying competitive mortgage rates tailored to your budget.
-                                    </span>
-                                </li>
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 text-[#00472f] font-bold 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="transition-all duration-300 group-hover:translate-x-1">
-                                        Assisting with documentation and ensuring compliance with lending regulations.
-                                    </span>
-                                </li>
-                                <li className="flex items-start group">
-                                    <span className="mr-2 mt-1.5 text-[#00472f] font-bold 
-                                                 transition-transform duration-300 
-                                                 group-hover:scale-125">•</span>
-                                    <span className="transition-all duration-300 group-hover:translate-x-1">
-                                        Expert advice on refinancing options to reduce long-term costs.
-                                    </span>
-                                </li>
+                                {mortgageServices.map((service, index) => (
+                                    <li key={index} className="flex items-start group">
+                                        <span className="mr-2 mt-1.5 text-[#00472f] font-bold 
+                                                     transition-transform duration-300 
+                                                     group-hover:scale-125">•</span>
+                                        <span className="transition-all duration-300 group-hover:translate-x-1">
+                                            {service}
+                                        </span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -74,7 +66,7 @@ const MortgageMoney = () => {
                                     transition-all duration-300">
                             <FlashImage
                                 src="/mortgageimage/2.2_mortgage-planning included_points.jpg"
-                                alt="Mortgage Money Services"
+                                alt={t.mortgageMoneyImageAlt}
                                 priority
                             />
                         </div>

@@ -1,8 +1,15 @@
-import Image from 'next/image';
-import React from 'react';
-import FlashImage from '../ui/FlashImage';
+'use client'
+
+import Image from 'next/image'
+import React from 'react'
+import FlashImage from '../ui/FlashImage'
+import { useLanguage } from '@/lib/i18n/LanguageContext'
+import { translations } from '@/lib/i18n/translations'
 
 const WhoWeAre = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
   return (
     <div className="relative w-full py-8">
       <div className="relative w-full max-w-[1280px] mx-auto px-4 md:px-0">
@@ -13,17 +20,17 @@ const WhoWeAre = () => {
               <div>
                 <div className="flex flex-col space-y-1 sm:space-y-2 mb-3 sm:mb-4 md:mb-8">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight md:leading-[54px] text-left whitespace-normal md:whitespace-nowrap">
-                    About Everon Property & Mortgage
+                    {t.whoWeAreTitle1}
                   </h2>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-lato font-extrabold text-[#1C1C1C] leading-tight md:leading-[54px] text-left">
-                    Consultancy Limited
+                    {t.whoWeAreTitle2}
                   </h2>
                 </div>
                 <p className="w-full md:w-[474px] text-2xl md:text-[40px] font-lato font-bold text-[#1C1C1C] leading-tight md:leading-[48px] text-left pt-4 md:pt-[15px] pb-4 md:pb-[25px]">
-                  Who We Are
+                  {t.whoWeAreSubtitle}
                 </p>
                 <p className="w-full md:w-[511px] text-lg md:text-[24px] font-lato font-normal text-[#1C1C1C] leading-normal md:leading-[28.8px] text-left">
-                  Everon Property & Mortgage Consultancy Limited is a trusted name in the consultancy sector, specializing in property, mortgage, and financial services. Based in the heart of Tsim Sha Tsui, Kowloon, we have been empowering individuals and businesses with tailored financial solutions.
+                  {t.whoWeAreDesc}
                 </p>
               </div>
             </div>
@@ -34,7 +41,7 @@ const WhoWeAre = () => {
             <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px] overflow-hidden rounded-[30px]">
               <FlashImage
                 src="/aboutimage/Who we are.jpg"
-                alt="House"
+                alt={t.whoWeAreImage}
                 priority
               />
             </div>
@@ -42,7 +49,7 @@ const WhoWeAre = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default WhoWeAre;
+export default WhoWeAre

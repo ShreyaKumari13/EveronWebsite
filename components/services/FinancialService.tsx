@@ -1,10 +1,17 @@
+'use client'
+
 import Image from 'next/image';
 import React from 'react';
 import FlashImage from '../ui/FlashImage';
 import AnimatedButton from '../ui/AnimatedButton';
 import Link from 'next/link';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const FinancialService = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="relative w-full -mt-8 md:-mt-16">
       <div className="relative w-full max-w-[1280px] mx-auto px-4 md:px-0">
@@ -17,23 +24,23 @@ const FinancialService = () => {
                   <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] mr-4">
                     <Image
                       src="/serviceimage/Group 163 (1).png"
-                      alt="Financial Icon"
+                      alt={t.financialIconAlt}
                       fill
                       className="object-contain"
                     />
                   </div>
                 </div>
                 <p className="w-full md:w-[474px] text-3xl md:text-[40px] font-lato font-bold text-[#1C1C1C] leading-tight md:leading-[48px] text-left mt-4">
-                  Financial Solutions
+                  {t.financialSolutionsTitle}
                 </p>
                 <p className="w-full md:w-[511px] pt-4 text-lg md:text-[24px] font-lato font-normal text-[#1C1C1C] leading-normal md:leading-[28.8px] text-left">
-                  We offer personalized financial planning for individuals and customized strategies for businesses. Our solutions are designed to meet your specific goals and challenges. Whether personal or corporate, we ensure your financial success with tailored approaches.
+                  {t.financialSolutionsDesc}
                 </p>
                 <div className="flex justify-center md:justify-start mt-8 md:mt-5">
                   <div className="cursor-pointer">
                     <Link href="/financialplanning">
                       <AnimatedButton 
-                        text="Read More"
+                        text={t.readMore}
                         variant="dark-green"
                       />
                     </Link>
@@ -48,7 +55,7 @@ const FinancialService = () => {
             <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px] overflow-hidden rounded-[30px]">
               <FlashImage
                 src="/serviceimage/Finance.jpg"
-                alt="Financial Services"
+                alt={t.financialServicesAlt}
                 priority
               />
             </div>

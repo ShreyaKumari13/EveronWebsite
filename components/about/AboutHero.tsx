@@ -5,9 +5,13 @@ import Header from '../Header'
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import AnimatedButton from '../ui/AnimatedButton'
+import { useLanguage } from '@/lib/i18n/LanguageContext'
+import { translations } from '@/lib/i18n/translations'
 
 export default function AboutHero() {
-  const router = useRouter();
+  const router = useRouter()
+  const { language } = useLanguage()
+  const t = translations[language]
 
   return (
     <section className="relative w-full min-h-[60vh] md:min-h-[85vh] flex items-center">
@@ -15,7 +19,7 @@ export default function AboutHero() {
       <div className="absolute inset-0">
         <Image
           src="/aboutimage/Banner.jpg"
-          alt="Luxury home background"
+          alt={t.aboutHeroBackground}
           fill
           className="object-cover"
           priority
@@ -34,25 +38,23 @@ export default function AboutHero() {
             <div className="text-white text-center flex flex-col items-center">
               {/* Title */}
               <h1 className="font-lato text-3xl md:text-[60px] font-extrabold leading-tight md:leading-[72px] text-center mb-3 md:mb-6 decoration-white">
-                Find Your Dream Property Here
+                {t.aboutHeroTitle}
               </h1>
               {/* Subtitle */}
               <p className="font-lato text-xl md:text-[30px] font-extrabold leading-tight md:leading-[36px] text-center mb-3 md:mb-6 decoration-white">
-                Property & Mortgage Consultancy in Hong Kong | Everon
+                {t.aboutHeroSubtitle}
               </p>
               {/* Description */}
               <div className="font-lato text-base md:text-[24px] leading-normal md:leading-[28.8px] font-normal text-center">
                 <p className="mx-auto max-w-[850px]">
-                  Everon Property & Mortgage Consultancy Limited offers tailored
-                  property, mortgage, and financial services to individuals
-                  and corporations in Hong Kong.
+                  {t.aboutHeroDescription}
                 </p>
               </div>
               {/* Button */}
               <div className="flex items-center justify-center mt-6 md:mt-8">
                 <AnimatedButton
                   onClick={() => router.push('/services')}
-                  text="Learn More"
+                  text={t.learnMore}
                   size="large"
                 />
               </div>

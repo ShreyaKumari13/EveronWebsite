@@ -1,8 +1,15 @@
+'use client'
+
 import Image from 'next/image';
 import React from 'react';
 import FlashImage from '../ui/FlashImage';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const OurMission = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="relative w-full py-8 md:py-0">
       <div className="relative w-full max-w-[1280px] mx-auto px-4 md:px-0">
@@ -12,12 +19,10 @@ const OurMission = () => {
             <div className="flex flex-col h-full">
               <div>
                 <p className="w-full md:w-[474px] text-3xl md:text-[40px] font-lato font-bold text-[#1C1C1C] leading-tight md:leading-[48px] text-left mb-3">
-                  Our Mission
+                  {t.ourMissionTitle}
                 </p>
                 <p className="w-full md:w-[511px] pt-4 md:pt-[40px] text-lg md:text-[24px] font-lato font-normal text-[#1C1C1C] leading-normal md:leading-[28.8px] text-left">
-                  To deliver professional, reliable, and personalized consultancy services that
-                  address our clients&apos; unique challenges in property, mortgage, and financial
-                  matters.
+                  {t.ourMissionDesc}
                 </p>
               </div>
             </div>
@@ -28,7 +33,7 @@ const OurMission = () => {
             <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px] overflow-hidden rounded-[30px]">
               <FlashImage
                 src="/aboutimage/Our mission.jpg"
-                alt="Two people discussing in an office"
+                alt={t.ourMissionImage}
                 priority
               />
             </div>

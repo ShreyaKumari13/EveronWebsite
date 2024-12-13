@@ -1,7 +1,14 @@
+'use client'
+
 import { Phone, Mail, MapPin } from 'lucide-react'
 import React from 'react'
+import { useLanguage } from '@/lib/i18n/LanguageContext'
+import { translations } from '@/lib/i18n/translations'
 
 const ContactSection = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
   return (
     <section className="w-full bg-white pb-5">
       <div className="mx-auto max-w-[954px] px-4 md:px-0">
@@ -16,10 +23,10 @@ const ContactSection = () => {
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-[#00492C] rounded-full flex items-center justify-center mb-4 md:mb-6">
                   <Phone className="w-8 h-8 md:w-10 md:h-10 text-white" />
                 </div>
-                <h2 className="text-2xl md:text-[26px] font-lato font-bold mb-2 md:mb-4 text-[#1C1C1C]">Contact Us</h2>
+                <h2 className="text-2xl md:text-[26px] font-lato font-bold mb-2 md:mb-4 text-[#1C1C1C]">{t.contactUs}</h2>
                 <div className="space-y-1 md:space-y-2 text-lg md:text-[24px] font-lato text-[#1C1C1C]">
-                  <p>6501 6890</p>
-                  <p>2712 8382</p>
+                  <p>{t.phoneNumber1}</p>
+                  <p>{t.phoneNumber2}</p>
                 </div>
               </div>
 
@@ -28,12 +35,12 @@ const ContactSection = () => {
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-[#00492C] rounded-full flex items-center justify-center mb-4 md:mb-6">
                   <Mail className="w-8 h-8 md:w-10 md:h-10 text-white" />
                 </div>
-                <h2 className="text-2xl md:text-[26px] font-lato font-bold mb-2 md:mb-4 text-[#1C1C1C]">Email</h2>
+                <h2 className="text-2xl md:text-[26px] font-lato font-bold mb-2 md:mb-4 text-[#1C1C1C]">{t.email}</h2>
                 <a 
                   href="mailto:info@everonmortgage.com"
                   className="text-lg md:text-[20px] font-lato font-normal leading-normal md:leading-[40px] text-center text-[#1C1C1C] hover:text-[#8E8154] transition-colors [text-underline-position:from-font] [text-decoration-skip-ink:none]"
                 >
-                  info@everonmortgage.com
+                  {t.emailAddress}
                 </a>
               </div>
 
@@ -42,11 +49,11 @@ const ContactSection = () => {
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-[#00492C] rounded-full flex items-center justify-center mb-4 md:mb-6">
                   <MapPin className="w-8 h-8 md:w-10 md:h-10 text-white" />
                 </div>
-                <h2 className="text-2xl md:text-[26px] font-lato font-bold mb-2 md:mb-4 text-[#1C1C1C]">Location</h2>
+                <h2 className="text-2xl md:text-[26px] font-lato font-bold mb-2 md:mb-4 text-[#1C1C1C]">{t.location}</h2>
                 <div className="space-y-1 md:space-y-2 text-lg md:text-[20px] font-lato font-normal leading-normal md:leading-[40px] text-center text-[#1C1C1C]">
-                  <p>Room 1314A, 13/F, Lippo</p>
-                  <p>Sun Plaza, 28 Canton Road,</p>
-                  <p>Tsim Sha Tsui, Kowloon</p>
+                  {t.contactAddress.split('\n').map((line, index) => (
+                    <p key={index}>{line}</p>
+                  ))}
                 </div>
               </div>
             </div>

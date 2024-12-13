@@ -2,15 +2,20 @@
 
 import Image from 'next/image'
 import Header from '../Header'
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const MortgageHero = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="relative w-full min-h-[50vh] sm:min-h-[60vh] md:min-h-[75vh] lg:min-h-[85vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 
           src="/mortgageimage/2.0_Mortgage Planning Banner Image.jpg"
-          alt="Mortgage Planning background"
+          alt={t.mortgageHeroBgAlt}
           fill
           className="object-cover object-center"
           priority
@@ -44,7 +49,7 @@ const MortgageHero = () => {
                            tracking-normal sm:tracking-wide
                            px-2 sm:px-4
                            drop-shadow-md">
-                Mortgage Planning
+                {t.mortgageHeroTitle}
               </h1>
             </div>
           </div>

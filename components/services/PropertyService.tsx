@@ -1,10 +1,17 @@
+'use client'
+
 import Image from 'next/image';
 import React from 'react';
 import FlashImage from '../ui/FlashImage';
 import AnimatedButton from '../ui/AnimatedButton';
 import Link from 'next/link';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const PropertyService = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="relative w-full">
       <div className="relative w-full max-w-[1280px] mx-auto px-4 md:px-0">
@@ -17,29 +24,27 @@ const PropertyService = () => {
                   <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] mr-4">
                     <Image
                       src="/serviceimage/home.png"
-                      alt="Home Icon"
+                      alt={t.propertyIconAlt}
                       fill
                       className="object-contain"
                     />
                   </div>
                 </div>
                 <p className="w-full md:w-[474px] text-3xl md:text-[40px] font-lato font-bold text-[#1C1C1C] leading-tight md:leading-[48px] text-left mt-2">
-                  Property Consultancy Services
+                  {t.propertyServicesTitle}
                 </p>
                 <p className="w-full md:w-[511px] pt-2 pb-4  text-lg md:text-[24px] font-lato font-normal text-[#1C1C1C] leading-normal md:leading-[28.8px] text-left">
-                  Whether you&apos;re buying, selling, or investing, our experts provide tailored advice to help you make informed decisions.
-                  We analyze market trends and craft strategies to maximize your returns while minimizing risks.
+                  {t.propertyServicesDesc}
                 </p>
               </div>
               <div className="flex justify-center md:justify-start ml-0 md:ml-[-20px] mt-8 md:mt-0 pl-0 md:pl-5">
                 <Link href="/serviceproperty">
                   <AnimatedButton
                     variant="dark-green"
-                    text="Read More"
+                    text={t.readMore}
                   />
                 </Link>
               </div>
-
             </div>
           </div>
 
@@ -48,7 +53,7 @@ const PropertyService = () => {
             <div className="relative w-full max-w-[600px] h-[240px] md:h-[360px] overflow-hidden rounded-[30px]">
               <FlashImage
                 src="/serviceimage/Property.jpg"
-                alt="Property Consultancy Services"
+                alt={t.propertyServicesAlt}
                 priority
               />
             </div>
@@ -56,7 +61,6 @@ const PropertyService = () => {
         </div>
       </div>
     </div>
-   
   );
 };
 

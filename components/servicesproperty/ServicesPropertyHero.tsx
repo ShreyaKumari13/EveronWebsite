@@ -2,15 +2,20 @@
 
 import Image from 'next/image'
 import Header from '../Header'
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const ServicesPropertyHero = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="relative w-full min-h-[50vh] sm:min-h-[60vh] md:min-h-[75vh] lg:min-h-[85vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 
           src="/serviceproperty/1.0_Property Consultancy Services Banner Image.jpg"
-          alt="Property Services background"
+          alt={t.propertyHeroBgAlt}
           fill
           className="object-cover object-center"
           priority
@@ -39,7 +44,7 @@ const ServicesPropertyHero = () => {
                            leading-tight sm:leading-tight md:leading-tight
                            tracking-normal sm:tracking-wide
                            px-2 sm:px-4">
-                Property Consultancy Services
+                {t.propertyHeroTitle}
               </h1>
             </div>
           </div>

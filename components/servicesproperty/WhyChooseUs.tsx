@@ -1,8 +1,21 @@
+'use client'
+
 import Image from 'next/image';
 import React from 'react';
 import FlashImage from '../ui/FlashImage';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { translations } from '@/lib/i18n/translations';
 
 const WhyChooseUs = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
+    const reasons = [
+        t.propertyWhyChooseReason1,
+        t.propertyWhyChooseReason2,
+        t.propertyWhyChooseReason3,
+    ];
+
     return (
         <section className="px-3 sm:px-4 py-6 sm:py-8 md:py-12 mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
@@ -16,7 +29,7 @@ const WhyChooseUs = () => {
                                   transition-all duration-300">
                         <FlashImage
                             src="/serviceproperty/1.2_Property Consultancy why choose us.jpg"
-                            alt="Why Choose Us"
+                            alt={t.propertyWhyChooseUsAlt}
                             priority
                         />
                     </div>
@@ -30,7 +43,7 @@ const WhyChooseUs = () => {
                                         font-lato font-bold text-[#1C1C1C] 
                                         leading-tight md:leading-[1.2] 
                                         text-left mb-2 sm:mb-3">
-                                Why Choose Us
+                                {t.propertyWhyChooseUsTitle}
                             </p>
                             <ul className="w-full max-w-[511px] 
                                          pt-2 sm:pt-3 md:pt-4 
@@ -39,18 +52,12 @@ const WhyChooseUs = () => {
                                          leading-normal md:leading-[1.2] 
                                          text-left list-none 
                                          space-y-4 sm:space-y-5 md:space-y-6">
-                                <li className="flex items-start">
-                                    <span className="mr-2 mt-1.5 text-[#00472f] font-bold">•</span>
-                                    <span>Extensive market knowledge and a proven track record.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-2 mt-1.5 text-[#00472f] font-bold">•</span>
-                                    <span>Personalized services designed to align with your financial objectives.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-2 mt-1.5 text-[#00472f] font-bold">•</span>
-                                    <span>A commitment to delivering measurable results for our clients.</span>
-                                </li>
+                                {reasons.map((reason, index) => (
+                                    <li key={index} className="flex items-start">
+                                        <span className="mr-2 mt-1.5 text-[#00472f] font-bold">•</span>
+                                        <span>{reason}</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -65,7 +72,7 @@ const WhyChooseUs = () => {
                           text-underline-position-from-font 
                           decoration-skip-ink-none
                           max-w-[900px]">
-                    Let us help you turn your property aspirations into achievements.
+                    {t.propertyWhyChooseUsClosing}
                 </p>
             </div>
         </section>
