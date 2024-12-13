@@ -162,9 +162,9 @@ const Header = ({ variant = 'transparent', className = '' }: HeaderProps) => {
               <Link href="/contactus" className="block py-2 px-4 text-[#00492C] hover:bg-gray-100">
                 {t.contact}
               </Link>
-              <div className="py-2 px-4">
+              {/* <div className="py-2 px-4">
                 <LanguageSwitcher variant="solid" />
-              </div>
+              </div> */}
             </div>
           </div>
         )}
