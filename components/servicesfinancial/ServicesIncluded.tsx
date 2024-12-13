@@ -152,7 +152,6 @@
 //     )
 // }
 
-
 'use client'
 
 import Image from 'next/image'
@@ -160,29 +159,26 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { translations } from '@/lib/i18n/translations';
 
-// Define a type for the translation keys
-type TranslationKey = `financialServiceTitle${number}` | `financialServiceDesc${number}`
-
 const services = [
     {
         imageSrc: "/financial/Personal Finance.png",
-        titleKey: "financialServiceTitle1" as const,
-        descKey: "financialServiceDesc1" as const,
+        titleKey: "financialServiceTitle1",
+        descKey: "financialServiceDesc1",
     },
     {
         imageSrc: "/financial/Corporate Finance.png",
-        titleKey: "financialServiceTitle2" as const,
-        descKey: "financialServiceDesc2" as const,
+        titleKey: "financialServiceTitle2",
+        descKey: "financialServiceDesc2",
     },
     {
         imageSrc: "/financial/Investment.png",
-        titleKey: "financialServiceTitle3" as const,
-        descKey: "financialServiceDesc3" as const,
+        titleKey: "financialServiceTitle3",
+        descKey: "financialServiceDesc3",
     },
     {
         imageSrc: "/financial/Risk.png",
-        titleKey: "financialServiceTitle4" as const,
-        descKey: "financialServiceDesc4" as const,
+        titleKey: "financialServiceTitle4",
+        descKey: "financialServiceDesc4",
     },
 ]
 
@@ -193,8 +189,8 @@ export default function ServicesIncluded() {
     const localizedServices = services.map((service) => {
         return {
             imageSrc: service.imageSrc,
-            title: t[service.titleKey as TranslationKey],
-            description: t[service.descKey as TranslationKey],
+            title: t[service.titleKey as keyof typeof t],
+            description: t[service.descKey as keyof typeof t],
         }
     })
 
