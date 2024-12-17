@@ -144,7 +144,9 @@ export const translations = {
     // Financial Service Section
     financialIconAlt: "Financial Icon",
     financialSolutionsTitle: "Financial Solutions",
-    financialSolutionsDesc: "At <span class='font-[600]'>Everon Property & Mortgage Consultancy Limited</span>, we understand that every financial journey is unique. That's why we offer a range of <span class='font-[600]'>tailored financial solutions</span> to suit both individuals and businesses.",
+    financialSolutionsCompanyName: "Everon Property & Mortgage Consultancy Limited",
+    financialSolutionsDesc: "At Everon Property & Mortgage Consultancy Limited, we understand that every financial journey is unique. That's why we offer a range of tailored financial solutions to suit both individuals and businesses.",
+    financialSolutionsHeading: "Financial Solutions",
     financialServicesIncludeTitle: "Our Financial Planning Services Include:",
     financialServicesIncludeDesc: "Financial planning and management are essential to achieving your personal and business goals. We offer a wide range of tailored financial solutions designed to address the diverse needs of individuals and organizations. Here's how our expertise can help secure your financial future:",
     financialServiceTitle1: "Personal Financial Planning",
@@ -170,7 +172,7 @@ export const translations = {
     mortgagePlanningDesc: "We help you secure the most competitive mortgage rates and favorable terms for your needs. Our experts simplify the complexities of property financing, ensuring a smooth and stress-free process. Trust us to guide you every step of the way.",
     mortgageServiceAlt: "Mortgage Service",
     mortgageServiceImageAlt: "Mortgage Planning Services",
-    mortgagePlanningIntro: "Navigating the complexities of property financing can be daunting, but with <span class='font-[600]'>Everon Property & Mortgage Consultancy Limited</span>, you're in expert hands.",
+    mortgagePlanningIntro: "Navigating the complexities of property financing can be daunting, but with Everon Property & Mortgage Consultancy Limited, you're in expert hands.",
     mortgageServicesIncludeTitle: "Our Mortgage Planning Services Include:",
     mortgageServicesIncludeDesc: "Purchasing a home or refinancing your mortgage is a significant financial decision that requires careful planning and expertise. At the heart of our service is a commitment to guiding you through every step of the process, ensuring your mortgage aligns seamlessly with your financial goals. Here's what we offer:",
     mortgageMoneyImageAlt: "Mortgage Money Services",
@@ -369,8 +371,10 @@ export const translations = {
 
     // Financial Service Section
     financialIconAlt: "金融圖標",
-    financialSolutionsTitle: "理財方案",
-    financialSolutionsDesc: "在<span class='font-[600]'>裕隆房產和按揭諮詢有限公司</span>，我們深知每個人的理財之路都是獨特的。因此，我們提供一系列<span class='font-[600]'>量身定制的理財方案</span>，以滿足個人和企業的需求。",
+    financialSolutionsTitle: "財務解決方案",
+    financialSolutionsCompanyName: "Everon房地產及按揭顧問有限公司",
+    financialSolutionsDesc: "在Everon房地產及按揭顧問有限公司，我們深明每個財務旅程都是獨特的。因此，我們提供一系列量身定制的財務解決方案，以滿足個人和企業的需求。",
+    financialSolutionsHeading: "財務解決方案",
     financialServicesIncludeTitle: "我們的理財規劃服務包括：",
     financialServicesIncludeDesc: "理財規劃和管理對於實現個人和企業目標至關重要。我們提供廣泛的定制理財方案，旨在滿足個人和組織的多樣化需求。以下是我們的專業知識如何幫助您確保財務未來：",
     financialServiceTitle1: "個人理財規劃",
