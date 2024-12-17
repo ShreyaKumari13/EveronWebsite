@@ -42,11 +42,11 @@ const testimonials: Testimonial[] = [
     },
     quote: {
       en: "Thank you, Team, for exceeding our expectations. You sold our investment properties effectively, achieving impressive prices even in a challenging market.",
-      zh: "感谢团队超越了我们的期望。你们有效地销售了我们的投资物业，即使在充满挑战的市场中也取得了令人印象深刻的价格。"
+      zh: "感謝團隊超越了我們的期望。你們有效地銷售了我們的投資物業，即使在充滿挑戰的市場中也取得了令人印象深刻的價格。"
     },
     author: {
       en: "Chang Ching",
-      zh: "张清"
+      zh: "張清"
     },
     authorImage: "/images/Ellipse 5.png",
     projectImage: "/images/WHAT OUR CLIENT SAY.jpg",
