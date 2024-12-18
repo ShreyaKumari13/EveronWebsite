@@ -25,7 +25,7 @@ export const translations = {
     followFacebook: 'Follow us on Facebook',
     followLinkedin: 'Follow us on LinkedIn',
     visitErpLink: 'Visit our Property ERP link',
-    copyright: ' Everon Property & Mortgage Consultancy Limited. All rights reserved.',
+    copyright: '© Everon Property & Mortgage Consultancy Limited. All rights reserved.',
 
     
     // Contact Section translations
@@ -243,8 +243,8 @@ export const translations = {
     getStarted: '立即開始',
     
     // Footer translations
-    everonHome: 'Everon 首頁',
-    everonLogo: 'Everon 標誌',
+    everonHome: '裕隆主页',
+    everonLogo: '裕隆标志',
     footerAddress: '九龍尖沙咀\n廣東道28號\n力寶太陽廣場13樓1314A室',
     signUp: '註冊',
     privacyPolicy: '隱私政策',
@@ -254,14 +254,14 @@ export const translations = {
     followFacebook: '在Facebook上關注我們',
     followLinkedin: '在LinkedIn上關注我們',
     visitErpLink: '訪問我們的房地產ERP鏈接',
-    copyright: ' © Everon 房地產與按揭諮詢有限公司。版權所有。',
+    copyright: '© 裕隆物業按揭顧問有限公司。版權所有。',
     
     // Contact Section translations
     contactUs: '聯絡我們',
     phoneNumber1: '6501 6890',
     phoneNumber2: '2712 8382',
     email: '電子郵件',
-    emailAddress: 'info@everonmortgage.com',
+    emailAddress: 'info@裕隆物業按揭顧問有限公司.com',
     location: '地址',
     contactAddress: '九龍尖沙咀\n廣東道28號\n力寶太陽廣場13樓1314A室',
     
@@ -291,11 +291,11 @@ export const translations = {
     thirtyYears: '30年',
     
     // Welcome Section translations
-    welcomeTitle1: '歡迎來到 Everon 房地產及按揭',
+    welcomeTitle1: '歡迎來到裕隆物業按揭',
     welcomeTitle2: '顧問有限公司',
     welcomeSubtitle: '您值得信賴的房地產和金融解決方案夥伴',
-    welcomeDescription: '在 Everon 房地產及按揭顧問有限公司，我們專注於為香港客戶提供個性化的房地產、按揭和金融諮詢服務。我們的專業團隊在銀行和金融領域擁有超過十年的豐富經驗，致力於解決您的個人和企業財務挑戰。',
-    welcomeImage: '歡迎來到 Everon',
+    welcomeDescription: '在裕隆物業按揭顧問有限公司，我們專注於為香港客戶提供個性化的房地產、按揭和金融諮詢服務。憑藉我們在銀行和金融領域擁有十多年經驗的專業團隊，我們致力於解決您的個人和企業財務挑戰。',
+    welcomeImage: '歡迎來到裕隆',
     
     // Why Choose Us Section translations
     whyChooseUs: '為什麼選擇我們？',
@@ -312,14 +312,14 @@ export const translations = {
     // About Hero Section translations
     aboutHeroBackground: '豪華房產背景',
     aboutHeroTitle: '在這裡找到您夢想的房產',
-    aboutHeroSubtitle: '香港房地產與按揭諮詢 | Everon',
-    aboutHeroDescription: 'Everon 房地產及按揭顧問有限公司為香港的個人和企業提供量身定制的房地產、按揭和金融服務。',
+    aboutHeroSubtitle: '香港房地產與按揭諮詢 | 裕隆',
+    aboutHeroDescription: '裕隆物業按揭顧問有限公司為香港的個人和企業提供量身定制的房地產、按揭和金融服務。',
     
     // Who We Are Section translations
-    whoWeAreTitle1: '關於 Everon 房地產及按揭',
+    whoWeAreTitle1: '關於裕隆物業按揭',
     whoWeAreTitle2: '顧問有限公司',
     whoWeAreSubtitle: '關於我們',
-    whoWeAreDesc: 'Everon 房地產及按揭顧問有限公司是諮詢行業的信賴品牌，專注於房地產、按揭和金融服務。我們位於九龍尖沙咀的中心地帶，一直致力於為個人和企業提供量身定制的金融解決方案。',
+    whoWeAreDesc: '裕隆物業按揭顧問有限公司是諮詢行業的信譽品牌，專門從事房地產、按揭和金融服務。我們位於九龍尖沙咀的中心地帶，一直致力於為個人和企業提供量身定制的金融解決方案。',
     whoWeAreImage: '房屋',
     
     // Our Expertise Section translations
@@ -339,7 +339,7 @@ export const translations = {
     
     // Contact Form Section
     contactFormTitle: "聯絡我們",
-    contactFormSubtitle: "或直接發送郵件至",
+    contactFormSubtitle: "如有任何疑問，請隨時聯絡我們：",
     contactFormImage: "聯絡我們大樓",
     nameLabel: "姓名：",
     namePlaceholder: "請輸入您的姓名",
@@ -354,7 +354,7 @@ export const translations = {
     // Financial Contact Section
     financialGetInTouch: "聯絡我們",
     financialChallengesTitle: "讓我們一起解決您的財務挑戰",
-    financialContactSubtitle: "或直接發送郵件至",
+    financialContactSubtitle: "如有任何疑問，請隨時聯絡我們：",
     financialCallTitle: "直接致電",
     financialCallDesc: "工作時間內可聯絡",
     financialEmailTitle: "郵件支持",
@@ -372,8 +372,8 @@ export const translations = {
     // Financial Service Section
     financialIconAlt: "金融圖標",
     financialSolutionsTitle: "財務解決方案",
-    financialSolutionsCompanyName: "Everon 房地產及按揭顧問有限公司",
-    financialSolutionsDesc: "在 Everon 房地產及按揭顧問有限公司，我們深明每個財務旅程都是獨特的。因此，我們提供一系列量身定制的財務解決方案，以滿足個人和企業的需求。",
+    financialSolutionsCompanyName: "裕隆物業按揭顧問有限公司",
+    financialSolutionsDesc: "在裕隆物業按揭顧問有限公司，我們深明每個財務旅程都是獨特的。這就是為什麼我們提供一系列適合個人和企業的量身定制財務解決方案。",
     financialSolutionsHeading: "財務解決方案",
     financialServicesIncludeTitle: "我們的理財規劃服務包括：",
     financialServicesIncludeDesc: "理財規劃和管理對於實現個人和企業目標至關重要。我們提供廣泛的定制理財方案，旨在滿足個人和組織的多樣化需求。以下是我們的專業知識如何幫助您確保財務未來：",
@@ -385,7 +385,7 @@ export const translations = {
     financialServiceDesc3: "為多元化投資組合提供專業建議",
     financialServiceTitle4: "風險管理",
     financialServiceDesc4: "全面的保險和風險緩解策略。",
-    financialPartnerImageAlt: "為什麼選擇與 Everon 合作進行理財規劃",
+    financialPartnerImageAlt: "為什麼選擇與裕隆合作進行理財規劃",
     financialPartnerTitle: "為什麼與我們合作？",
     financialPartnerPoint1: "量身定制的解決方案，與您的目標保持一致。",
     financialPartnerPoint2: "擁有豐富行業知識的資深金融專家團隊。",
@@ -400,7 +400,7 @@ export const translations = {
     mortgagePlanningDesc: "我們幫助您獲取最具競爭力的按揭利率和最優惠的條款。我們的專家簡化房產融資的複雜性，確保流程順暢無壓力。信任我們，我們將全程為您提供指導。",
     mortgageServiceAlt: "按揭服務",
     mortgageServiceImageAlt: "按揭規劃服務",
-    mortgagePlanningIntro: "房產融資的複雜性可能令人望而生畏，但有了<span class='font-[600]'>Everon 房地產及按揭顧問有限公司</span>，您就有了專業指導。",
+    mortgagePlanningIntro: "房產融資的複雜性可能令人望而生畏，但有了裕隆物業按揭顧問有限公司，您就有了專業指導。",
     mortgageServicesIncludeTitle: "我們的按揭規劃服務包括：",
     mortgageServicesIncludeDesc: "購買房屋或重新融資是一個需要仔細規劃和專業知識的重要財務決定。我們服務的核心是承諾指導您完成整個過程的每一步，確保您的按揭與您的財務目標完美契合。以下是我們提供的服務：",
     mortgageMoneyImageAlt: "按揭理財服務",
@@ -408,7 +408,7 @@ export const translations = {
     mortgageServicePoint2: "為您的預算找到最具競爭力的按揭利率。",
     mortgageServicePoint3: "協助文件準備並確保符合貸款法規。",
     mortgageServicePoint4: "提供專業的再融資建議，以降低長期成本。",
-    mortgageWhyChooseImageAlt: "為什麼選擇 Everon 的按揭規劃服務",
+    mortgageWhyChooseImageAlt: "為什麼選擇裕隆進行按揭規劃",
     mortgageWhyChooseTitle: "為什麼選擇我們",
     mortgageWhyChoosePoint1: "與領先金融機構保持密切合作關係。",
     mortgageWhyChoosePoint2: "提供透明和公正的建議。",
@@ -417,8 +417,8 @@ export const translations = {
     
     // Property Service Section
     propertyIconAlt: "房產圖標",
-    propertyServicesTitle: "房產諮詢服務",
-    propertyServicesDesc: "無論您是購買、出售還是投資，我們的專家都會提供量身定制的建議，幫助您做出明智的決定。我們分析市場趨勢，制定策略，在最小化風險的同時最大化您的回報。",
+    propertyServicesTitle: "房產服務",
+    propertyServicesDesc: "裕隆物業按揭顧問有限公司為您提供全面的房產諮詢服務。我們的專業團隊將協助您實現房產投資目標，同時確保流程順暢無憂。",
     propertyServicesAlt: "房產諮詢服務",
 
     // Property Hero Section
@@ -427,7 +427,7 @@ export const translations = {
 
     // Property What We Offer Section
     whatWeOfferTitle: "我們的服務：",
-    propertyServicesIntro: "在 Everon 房地產及按揭顧問有限公司，我們專注於提供全面的房產諮詢服務，無論您是購買、出售還是投資，都能滿足您的目標。",
+    propertyServicesIntro: "在裕隆物業按揭顧問有限公司，我們專注於提供全面的房產諮詢服務，無論您是購買、出售還是投資，都能滿足您的目標。",
     propertyServicesTeam: "我們經驗豐富的顧問團隊確保為您提供戰略性建議，在最小化風險的同時最大化您的房產投資收益。",
     
     // Property Services Cards
