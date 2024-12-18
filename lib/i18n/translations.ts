@@ -291,7 +291,7 @@ export const translations = {
     thirtyYears: '30年',
     
     // Welcome Section translations
-    welcomeTitle1: '歡迎來到裕隆按揭物業',
+    welcomeTitle1: '歡迎來到 Everon 房地產及按揭',
     welcomeTitle2: '顧問有限公司',
     welcomeSubtitle: '您值得信賴的房地產和金融解決方案夥伴',
     welcomeDescription: '在裕隆按揭物業顧問有限公司，我們專注於為香港客戶提供個性化的房地產、按揭和金融諮詢服務。我們的專業團隊在銀行和金融領域擁有超過十年的豐富經驗，致力於解決您的個人和企業財務挑戰。',
